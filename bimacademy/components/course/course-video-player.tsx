@@ -4,19 +4,7 @@ import { ExternalLink } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import type { Course } from '@/types/course';
 
-// Import ReactPlayer dynamically to avoid SSR issues
-// Cast to any to avoid TypeScript errors with dynamic import properties
-const ReactPlayer = dynamic(() => import('react-player'), {
-  ssr: false,
-  loading: () => (
-    <div className="absolute inset-0 flex items-center justify-center bg-[#0F172A]">
-      <div className="animate-pulse flex flex-col items-center gap-3">
-        <div className="w-12 h-12 rounded-full border-2 border-coral-accent/20 border-t-coral-accent animate-spin" />
-        <p className="text-muted-foreground text-sm">Khởi tạo trình phát...</p>
-      </div>
-    </div>
-  )
-}) as any;
+import ReactPlayer from 'react-player'
 
 /**
  * Extract YouTube video ID from various YouTube URL formats
@@ -56,7 +44,7 @@ export function VideoPreview({ course, videoUrl }: VideoPreviewProps) {
     ? `https://www.youtube.com/watch?v=${videoId}`
     : targetUrl;
 
-  const isHls = targetUrl?.endsWith('.m3u8');
+  const isHls = targetUrl?.includes('.m3u8') || targetUrl?.includes('playlist.m3u8');
 
   return (
     <div className="space-y-3">
@@ -64,24 +52,13 @@ export function VideoPreview({ course, videoUrl }: VideoPreviewProps) {
       <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-[#0F172A] shadow-lg ring-1 ring-white/10">
         <div className="absolute inset-0 w-full h-full">
           <ReactPlayer
-            url={normalizedUrl}
+            src={normalizedUrl}
             width="100%"
             height="100%"
             controls={true}
             playing={false}
             pip={false}
             style={{ position: 'absolute', top: 0, left: 0 }}
-            config={{
-              youtube: {
-                playerVars: {
-                  rel: 0,
-                  modestbranding: 1
-                }
-              },
-              file: {
-                forceHLS: isHls,
-              }
-            }}
             onError={(e: any) => console.error("Video player error:", e)}
           />
         </div>
