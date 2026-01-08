@@ -13,7 +13,7 @@ const inter = Inter({
 });
 
 // Google OAuth Client ID from environment
-const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
+const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '306954035355-srj4gr9t6dcahego3b4r3umhfq2n5pl9.apps.googleusercontent.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bimdeveloperacademy.com'),
