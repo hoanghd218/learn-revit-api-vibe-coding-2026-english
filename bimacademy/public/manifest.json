@@ -1,0 +1,21 @@
+{
+  "name": "BIM Developer Academy",
+  "short_name": "BIM Dev Academy",
+  "description": "Transform from BIM User to Developer. Master C#, Revit API, and WPF.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1E1E1E",
+  "theme_color": "#007ACC",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

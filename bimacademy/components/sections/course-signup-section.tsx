@@ -4,7 +4,10 @@ import { Container } from '@/components/bim';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { SignIn, SignUp } from '@clerk/nextjs';
+import { useAuth } from '@/lib/auth/auth-context';
+import { LoginForm } from '@/components/auth/login-form';
+import { RegisterForm } from '@/components/auth/register-form';
+import Link from 'next/link';
 import { useState } from 'react';
 
 // Course preview data
@@ -46,6 +49,7 @@ const courses = [
  * Adapted from reference design to match ClaudeKit dark theme (Coral & Bronze accents)
  */
 export function CourseSignupSection() {
+    const { isSignedIn } = useAuth();
     const [activeTab, setActiveTab] = useState<'register' | 'login'>('register');
 
     return (
@@ -125,83 +129,29 @@ export function CourseSignupSection() {
                                     </Button>
                                 </div>
 
-                                {/* Clerk Sign In / Sign Up Components */}
-                                {activeTab === 'register' ? (
-                                    <SignUp
-                                        appearance={{
-                                            variables: {
-                                                colorPrimary: '#D97757',
-                                                colorText: '#F5F5F5',
-                                                colorBackground: '#1A1A2E',
-                                                colorInputBackground: '#252540',
-                                                colorInputText: '#F5F5F5',
-                                                colorDanger: '#EF4444',
-                                                colorSuccess: '#10B981',
-                                                colorWarning: '#F59E0B',
-                                                colorNeutral: '#9CA3AF',
-                                                borderRadius: '0.5rem',
-                                                fontFamily: 'Inter, system-ui, sans-serif',
-                                            },
-                                            elements: {
-                                                formButtonPrimary: 'bg-coral-accent hover:bg-coral-accent/80 text-white',
-                                                card: 'bg-[#1A1A2E] border border-[#3A3A5A]',
-                                                headerTitle: 'text-white',
-                                                headerSubtitle: 'text-gray-400',
-                                                socialButtonsBlockButton: 'bg-[#252540] border border-[#3A3A5A] hover:bg-[#2A2A4A]',
-                                                formFieldLabel: 'text-gray-400',
-                                                formFieldInput: 'bg-[#1A1A2E] border border-[#3A3A5A] text-white',
-                                                footerActionLink: 'text-coral-accent hover:text-coral-accent/80',
-                                                identityBadge: 'bg-[#252540]',
-                                                accordionTriggerButton: 'text-white',
-                                                accordionContent: 'text-gray-400',
-                                                alternativeMethodsBlockButton: 'text-white',
-                                                alternativeMethodsBlockButtonArrow: 'text-gray-400',
-                                                formResendCodeLink: 'text-coral-accent',
-                                                badge: 'bg-[#252540] text-white',
-                                                rootBox: 'mx-auto',
-                                            },
-                                        }}
-                                        redirectUrl="/courses"
-                                        signInUrl="/sign-in"
+                                {/* Custom Auth Forms or Welcome Back */}
+                                {isSignedIn ? (
+                                    <div className="py-8 text-center space-y-6">
+                                        <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-coral-accent/10 text-coral-accent">
+                                            <span className="text-4xl">👋</span>
+                                        </div>
+                                        <div className="space-y-2">
+                                            <p className="text-lg font-semibold">Welcome back!</p>
+                                            <p className="text-sm text-muted-foreground">
+                                                You're already signed in. Continue your learning journey.
+                                            </p>
+                                        </div>
+                                        <Button asChild className="w-full glow-coral" size="lg">
+                                            <Link href="/courses">Go to My Courses</Link>
+                                        </Button>
+                                    </div>
+                                ) : activeTab === 'register' ? (
+                                    <RegisterForm
+                                        onSuccess={() => { }}
+                                        onSwitchToLogin={() => setActiveTab('login')}
                                     />
                                 ) : (
-                                    <SignIn
-                                        appearance={{
-                                            variables: {
-                                                colorPrimary: '#D97757',
-                                                colorText: '#F5F5F5',
-                                                colorBackground: '#1A1A2E',
-                                                colorInputBackground: '#252540',
-                                                colorInputText: '#F5F5F5',
-                                                colorDanger: '#EF4444',
-                                                colorSuccess: '#10B981',
-                                                colorWarning: '#F59E0B',
-                                                colorNeutral: '#9CA3AF',
-                                                borderRadius: '0.5rem',
-                                                fontFamily: 'Inter, system-ui, sans-serif',
-                                            },
-                                            elements: {
-                                                formButtonPrimary: 'bg-coral-accent hover:bg-coral-accent/80 text-white',
-                                                card: 'bg-[#1A1A2E] border border-[#3A3A5A]',
-                                                headerTitle: 'text-white',
-                                                headerSubtitle: 'text-gray-400',
-                                                socialButtonsBlockButton: 'bg-[#252540] border border-[#3A3A5A] hover:bg-[#2A2A4A]',
-                                                formFieldLabel: 'text-gray-400',
-                                                formFieldInput: 'bg-[#1A1A2E] border border-[#3A3A5A] text-white',
-                                                footerActionLink: 'text-coral-accent hover:text-coral-accent/80',
-                                                identityBadge: 'bg-[#252540]',
-                                                accordionTriggerButton: 'text-white',
-                                                accordionContent: 'text-gray-400',
-                                                alternativeMethodsBlockButton: 'text-white',
-                                                alternativeMethodsBlockButtonArrow: 'text-gray-400',
-                                                formResendCodeLink: 'text-coral-accent',
-                                                badge: 'bg-[#252540] text-white',
-                                                rootBox: 'mx-auto',
-                                            },
-                                        }}
-                                        redirectUrl="/courses"
-                                        signUpUrl="/sign-up"
-                                    />
+                                    <LoginForm redirectUrl="/courses" />
                                 )}
                             </CardContent>
                         </Card>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import { AuthProvider } from '@/lib/auth/auth-context';
 import "./globals.css";
 import { generateStructuredData } from "@/lib/seo/structured-data";
 
@@ -11,9 +9,6 @@ const inter = Inter({
   display: 'swap',
   preload: true,
 });
-
-// Google OAuth Client ID from environment
-const googleClientId = process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || '';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://bimdeveloperacademy.com'),
@@ -97,12 +92,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-background text-foreground">
-        <GoogleOAuthProvider clientId={googleClientId}>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-        </GoogleOAuthProvider>
+      <body className="antialiased">
+        {children}
       </body>
     </html>
   );

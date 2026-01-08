@@ -1,7 +1,8 @@
 'use client';
 
-import { SignIn } from '@clerk/nextjs';
 import { Section, Container } from '@/components/bim';
+import { LoginForm } from '@/components/auth/login-form';
+import Link from 'next/link';
 
 export default function SignInPage() {
   return (
@@ -16,43 +17,16 @@ export default function SignInPage() {
           </p>
         </div>
 
-        <SignIn
-          appearance={{
-            variables: {
-              colorPrimary: '#D97757',
-              colorText: '#F5F5F5',
-              colorBackground: '#1A1A2E',
-              colorInputBackground: '#252540',
-              colorInputText: '#F5F5F5',
-              colorDanger: '#EF4444',
-              colorSuccess: '#10B981',
-              colorWarning: '#F59E0B',
-              colorNeutral: '#9CA3AF',
-              borderRadius: '0.5rem',
-              fontFamily: 'Inter, system-ui, sans-serif',
-            },
-            elements: {
-              formButtonPrimary: 'bg-coral-accent hover:bg-coral-accent/80 text-white',
-              card: 'bg-[#1A1A2E] border border-[#3A3A5A]',
-              headerTitle: 'text-white',
-              headerSubtitle: 'text-gray-400',
-              socialButtonsBlockButton: 'bg-[#252540] border border-[#3A3A5A] hover:bg-[#2A2A4A]',
-              formFieldLabel: 'text-gray-400',
-              formFieldInput: 'bg-[#1A1A2E] border border-[#3A3A5A] text-white',
-              footerActionLink: 'text-coral-accent hover:text-coral-accent/80',
-              identityBadge: 'bg-[#252540]',
-              accordionTriggerButton: 'text-white',
-              accordionContent: 'text-gray-400',
-              alternativeMethodsBlockButton: 'text-white',
-              alternativeMethodsBlockButtonArrow: 'text-gray-400',
-              formResendCodeLink: 'text-coral-accent',
-              badge: 'bg-[#252540] text-white',
-              rootBox: 'mx-auto',
-            },
-          }}
-          redirectUrl="/"
-          signUpUrl="/sign-up"
-        />
+        <div className="bg-card/80 backdrop-blur-sm border border-border rounded-xl p-6">
+          <LoginForm redirectUrl="/courses" />
+        </div>
+
+        <p className="text-center mt-6 text-sm text-muted-foreground">
+          Don't have an account?{' '}
+          <Link href="/sign-up" className="text-coral-accent hover:text-coral-accent/80">
+            Sign up
+          </Link>
+        </p>
       </Container>
     </Section>
   );
