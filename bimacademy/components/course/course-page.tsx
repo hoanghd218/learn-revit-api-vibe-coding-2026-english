@@ -54,7 +54,6 @@ export function CoursePage({ course }: CoursePageProps) {
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-6 lg:gap-10">
             {/* Left column - Video and header/content */}
             <div className="space-y-5 md:space-y-7">
-              {activeLesson?.videoUrl}
               <VideoPreview
                 course={course}
                 videoUrl={activeLesson?.videoUrl}
