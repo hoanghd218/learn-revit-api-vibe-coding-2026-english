@@ -50,7 +50,7 @@ export default function SignInPage() {
               rootBox: 'mx-auto',
             },
           }}
-          redirectUrl="/courses"
+          redirectUrl="/"
           signUpUrl="/sign-up"
         />
       </Container>
