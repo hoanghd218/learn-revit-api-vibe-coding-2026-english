@@ -2,7 +2,7 @@
 
 import { Section, Container, SectionHeading, TechCard } from '@/components/bim';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
-import { Code2, Database, Box, Palette, FileCode, Terminal, GitBranch } from 'lucide-react';
+import { Code2, Database, Box, Palette, FileCode, Terminal, GitBranch, Sparkles } from 'lucide-react';
 
 interface Technology {
   name: string;
@@ -12,6 +12,12 @@ interface Technology {
 }
 
 const technologies: Technology[] = [
+  {
+    name: 'AI & Vibe Coding',
+    icon: <Sparkles className="h-12 w-12 text-[#FFD700]" />,
+    description: 'Leverage AI to generate Revit add-ins through natural language',
+    color: '#FFD700',
+  },
   {
     name: 'C#',
     icon: <Code2 className="h-12 w-12 text-[#239120]" />,
@@ -90,9 +96,9 @@ export function TechStackSection() {
       <Container>
         <SectionHeading
           level={2}
-          subtitle="Master the complete BIM development stack"
+          subtitle="The ultimate AI-powered BIM development experience (Vibe Coding)"
         >
-          Professional Technology Stack
+          AI-First BIM Technology Stack
         </SectionHeading>
 
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -107,15 +113,40 @@ export function TechStackSection() {
           ))}
         </div>
 
-        {/* Industry Standard Badge */}
-        <div className="mt-12 text-center">
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Learn the <span className="font-bold text-coral-accent">exact same tools</span> used by
-            professional BIM developers at{' '}
-            <span className="font-semibold text-foreground">
-              Autodesk, Thornton Tomasetti, and Kohn Pedersen Fox
-            </span>
-          </p>
+        <div className="mt-16 space-y-12">
+          {/* Industry Standard Badge */}
+          <div className="text-center">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto italic mb-4">
+              "Master the tools used at the world's leading firms"
+            </p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+              <span className="font-bold text-xl text-foreground">AUTODESK</span>
+              <span className="font-bold text-xl text-foreground">THORNTON TOMASETTI</span>
+              <span className="font-bold text-xl text-foreground">KPF</span>
+            </div>
+            <p className="mt-4 text-sm text-muted-foreground uppercase tracking-widest font-semibold flex items-center justify-center gap-2">
+              <span className="h-px w-8 bg-border" />
+              Industry Standard Workflow
+              <span className="h-px w-8 bg-border" />
+            </p>
+          </div>
+
+          {/* Vibe Coding Highlight Card */}
+          <div className="relative group overflow-hidden rounded-2xl border border-coral-accent/20 bg-linear-to-br from-section-light/50 to-section-dark p-8 md:p-12 text-center max-w-4xl mx-auto transition-all duration-300 hover:border-coral-accent/40 hover:shadow-2xl hover:shadow-coral-accent/5">
+            <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Sparkles className="h-24 w-24 text-coral-accent" />
+            </div>
+
+            <p className="text-2xl font-bold text-foreground mb-4">
+              Don't just code. <span className="text-coral-accent italic">Vibe.</span>
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              This course is built for the <span className="font-bold text-foreground">AI era</span>.
+              We'll show you how to leverage <span className="font-semibold text-foreground underline decoration-coral-accent/30">AI agents</span> to
+              automate your workflow, generate high-quality code, and build professional Revit add-ins
+              <span className="italic block mt-2 text-coral-accent">even if you've never written a line of code before.</span>
+            </p>
+          </div>
         </div>
       </Container>
     </Section>

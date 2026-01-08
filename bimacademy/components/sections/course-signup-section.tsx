@@ -8,41 +8,9 @@ import { useAuth } from '@/lib/auth/auth-context';
 import { LoginForm } from '@/components/auth/login-form';
 import { RegisterForm } from '@/components/auth/register-form';
 import Link from 'next/link';
-import { useState } from 'react';
-
-// Course preview data
-const courses = [
-    {
-        id: 1,
-        title: 'AI & Automation: Creative Ideas for Unlimited Interior Design',
-        badge: 'Free 100%',
-        image: '/images/course-1.jpg',
-    },
-    {
-        id: 2,
-        title: 'Optimize Material Costs with AI – Beautiful Design at Great Prices',
-        badge: 'Free 100%',
-        image: '/images/course-2.jpg',
-    },
-    {
-        id: 3,
-        title: 'AI Predicts Interior Trends 2025 – Stay Ahead of the Market',
-        badge: 'Free 100%',
-        image: '/images/course-3.jpg',
-    },
-    {
-        id: 4,
-        title: 'Automate Interior Design Workflows with AI Workflow',
-        badge: 'Free 100%',
-        image: '/images/course-4.jpg',
-    },
-    {
-        id: 5,
-        title: 'AI Personalizes Living Spaces Based on Customer Preferences',
-        badge: 'Free 100%',
-        image: '/images/course-5.jpg',
-    },
-];
+import { useState, useEffect } from 'react';
+import { fetchCourseData } from '@/lib/api';
+import { Lesson } from '@/types/course';
 
 /**
  * CourseSignupSection component - Two-column layout with course list and registration form
@@ -51,6 +19,25 @@ const courses = [
 export function CourseSignupSection() {
     const { isSignedIn } = useAuth();
     const [activeTab, setActiveTab] = useState<'register' | 'login'>('register');
+    const [lessons, setLessons] = useState<Lesson[]>([]);
+
+    useEffect(() => {
+        const loadLessonData = async () => {
+            console.log('Fetching course data...');
+            const course = await fetchCourseData();
+            console.log('Course data received:', course);
+            if (course && course.curriculum) {
+                // Flatten curriculum sections into a single list of lessons
+                const allLessons = course.curriculum.flatMap(section => section.lessons);
+                console.log('All lessons flattened:', allLessons.length);
+                // Take only a subset to match original design intent if needed
+                setLessons(allLessons.slice(0, 10));
+            } else {
+                console.warn('No curriculum found in course data');
+            }
+        };
+        loadLessonData();
+    }, []);
 
     return (
         <section id="course-signup" className="relative py-16 md:py-20">
@@ -65,11 +52,11 @@ export function CourseSignupSection() {
                             BIM Architecture – Essential Skills for the New Era!
                         </h2>
 
-                        <div className="space-y-4">
-                            {courses.map((course) => (
+                        <div className="space-y-4 max-h-[480px] overflow-y-auto pr-2 custom-scrollbar">
+                            {lessons.map((lesson) => (
                                 <div
-                                    key={course.id}
-                                    className="flex gap-4 p-4 rounded-xl bg-card/50 border border-border hover:border-coral-accent transition-all duration-300 hover-lift group cursor-pointer"
+                                    key={lesson.id}
+                                    className="flex gap-4 p-4 rounded-xl bg-card/50 border border-border hover:border-coral-accent transition-all duration-300 hover-lift group cursor-pointer last:mb-2"
                                 >
                                     {/* Thumbnail placeholder */}
                                     <div className="shrink-0 w-20 h-14 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
@@ -80,14 +67,17 @@ export function CourseSignupSection() {
 
                                     {/* Content */}
                                     <div className="flex-1 min-w-0">
-                                        <Badge
-                                            variant="outline"
-                                            className="mb-2 text-xs bg-[#4EC9B0]/10 text-[#4EC9B0] border-[#4EC9B0]/30"
-                                        >
-                                            {course.badge}
-                                        </Badge>
+                                        <div className="flex items-center justify-between mb-1">
+                                            <Badge
+                                                variant="outline"
+                                                className="text-[10px] px-1.5 py-0 leading-none bg-[#4EC9B0]/10 text-[#4EC9B0] border-[#4EC9B0]/30"
+                                            >
+                                                {lesson.badge}
+                                            </Badge>
+                                            <span className="text-[10px] text-muted-foreground font-mono">{lesson.duration}</span>
+                                        </div>
                                         <p className="text-sm text-foreground/90 group-hover:text-foreground transition-colors line-clamp-2">
-                                            {course.title}
+                                            {lesson.title}
                                         </p>
                                     </div>
                                 </div>

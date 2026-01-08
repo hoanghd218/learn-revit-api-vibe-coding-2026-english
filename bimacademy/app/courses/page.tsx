@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default function CoursesPage() {
-  redirect('/courses/lap-trinh-revit-api-cho-moi-version-revit');
+  redirect('/courses/ai-for-bim-developer-vibe-coding-2025');
 }

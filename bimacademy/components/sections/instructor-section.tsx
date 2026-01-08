@@ -3,6 +3,7 @@
 import { Section, Container, SectionHeading, StatBadge } from '@/components/bim';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { useScrollAnimation } from '@/hooks/use-scroll-animation';
 import {
@@ -23,33 +24,52 @@ interface Credential {
 
 const credentials: Credential[] = [
   {
-    title: '10+ Years BIM Development',
-    description: 'Built 50+ production plugins for global AEC firms',
+    title: '10+ Years BIM Experience',
+    description: 'Expert in BIM automation and AI implementation in construction.',
     icon: Building2,
   },
   {
-    title: 'Autodesk Certified',
-    description: 'Revit API Expert & .NET Developer',
+    title: 'BIM AI Expert',
+    description: 'Leading the digital transformation with AI in the Vietnamese AEC industry.',
     icon: Award,
   },
   {
-    title: '5000+ Students Taught',
-    description: 'Across 40+ countries, 4.8/5 average rating',
+    title: '8000+ Students Taught',
+    description: 'Empowering architects and engineers through the BimSpeed platform.',
     icon: Users,
   },
   {
-    title: 'Published Course Author',
-    description: 'Best-selling Revit API courses on Udemy & Skillshare',
+    title: 'Enterprise Trainer',
+    description: 'Advised dozens of large corporations on BIM/AI integration.',
     icon: BookOpen,
   },
 ];
 
 const achievements = [
-  'Led BIM automation at Foster + Partners',
-  'Developed MEP clash detection system processing 10M+ elements',
-  'Created automatic shop drawing generator (saved 200 hours/month)',
-  'Built parametric façade designer for Zaha Hadid Architects',
-  'Contributed to pyRevit open-source project',
+  'Founder of BimSpeed, a platform supporting 8000+ users.',
+  'Expert in BIM AI for architecture, structure, and MEP.',
+  'Digital transformation consultant for top construction firms.',
+  'Over 10 years of experience in Revit API and BIM automation.',
+  'Leading the BIM AI revolution in Vietnam\'s construction sector.',
+];
+
+const galleryImages = [
+  {
+    src: '/hoang/hoang%201.png',
+    alt: 'Alex Hoang Training',
+  },
+  {
+    src: '/hoang/training%20nha%20dep.jpg',
+    alt: 'BimSpeed Training Session',
+  },
+  {
+    src: '/hoang/sj1.jpeg',
+    alt: 'Student Support 1',
+  },
+  {
+    src: '/hoang/sj2.jpeg',
+    alt: 'Student Support 2',
+  },
 ];
 
 /**
@@ -109,16 +129,21 @@ export function InstructorSection() {
           <div ref={profileRef as any}>
             <Card className="border-coral-accent/20 hover:border-coral-accent/40 transition-colors">
               <CardHeader>
-                {/* Profile Image Placeholder */}
-                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-coral-accent via-bronze-accent to-coral-accent p-1">
-                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-                    <Code className="h-16 w-16 text-coral-accent" />
+                {/* Profile Image */}
+                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-coral-accent via-bronze-accent to-coral-accent p-1 overflow-hidden">
+                  <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden relative">
+                    <Image
+                      src="/hoang/avatar.png"
+                      alt="Alex Hoang"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                 </div>
 
-                <CardTitle className="text-2xl text-center">Your Instructor Name</CardTitle>
+                <CardTitle className="text-2xl text-center">Alex Hoang</CardTitle>
                 <CardDescription className="text-center text-base">
-                  Senior BIM Developer & Technical Instructor
+                  Founder of BimSpeed & BIM AI Expert
                 </CardDescription>
 
                 {/* Stats Row */}
@@ -130,15 +155,15 @@ export function InstructorSection() {
                     variant="primary"
                   />
                   <StatBadge
-                    value="5K+"
-                    label="Students"
+                    value="8K+"
+                    label="Users"
                     icon={Users}
                     variant="accent"
                   />
                   <StatBadge
-                    value="50+"
-                    label="Plugins"
-                    icon={Code}
+                    value="Top"
+                    label="Expert"
+                    icon={Award}
                     variant="success"
                   />
                 </div>
@@ -171,9 +196,8 @@ export function InstructorSection() {
                 {/* Quote */}
                 <div className="pt-6 border-t border-border/50">
                   <p className="text-sm italic text-muted-foreground">
-                    "I've trained over 5,000 engineers to become BIM developers. My mission is to
-                    help you <span className="text-coral-accent font-semibold">automate the impossible</span> and{' '}
-                    <span className="text-bronze-accent font-semibold">10x your value</span> to your organization."
+                    "BimSpeed specializes in <span className="text-coral-accent font-semibold">BIM AI solutions</span> for the
+                    construction sector in Vietnam, helping thousands <span className="text-bronze-accent font-semibold">automate their workflows</span>."
                   </p>
                 </div>
               </CardContent>
@@ -194,7 +218,7 @@ export function InstructorSection() {
                 <ul className="space-y-3">
                   {achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-[#4EC9B0] mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-[#4EC9B0] mt-0.5 shrink-0" />
                       <span className="text-sm text-muted-foreground">{achievement}</span>
                     </li>
                   ))}
@@ -206,26 +230,48 @@ export function InstructorSection() {
             <Card className="border-bronze-accent/20">
               <CardHeader>
                 <Badge className="w-fit mb-2 bg-coral-accent/20 text-coral-accent border-coral-accent/50">
-                  What Makes This Different
+                  Professional Profile
                 </Badge>
-                <CardTitle>Not Just Theory, Real-World Experience</CardTitle>
+                <CardTitle>About Alex Hoang</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4 text-sm text-muted-foreground">
                 <p>
-                  I don't teach "Hello World" examples. Every lesson is based on{' '}
-                  <span className="text-foreground font-semibold">real plugins I've built</span>{' '}
-                  for real companies solving real problems.
+                  Founder of <span className="text-foreground font-semibold">BimSpeed</span>, a platform that has helped over
+                  <span className="text-foreground font-semibold"> 8,000+ architects and construction engineers</span> automate BIM for architecture, structure, and MEP.
                 </p>
                 <p>
-                  You'll learn the <span className="text-foreground font-semibold">exact patterns</span>,{' '}
-                  <span className="text-foreground font-semibold">best practices</span>, and{' '}
-                  <span className="text-foreground font-semibold">shortcuts</span> I use daily
-                  as a professional BIM developer.
+                  I have trained <span className="text-foreground font-semibold">dozens of large enterprises</span> on BIM and AI solutions in construction,
+                  bringing about true digital transformation for the industry.
                 </p>
                 <div className="pt-2">
                   <Badge variant="outline" className="font-mono text-xs">
-                    Production-Ready Code, Not Tutorials
+                    Transforming Construction with AI
                   </Badge>
+                </div>
+              </CardContent>
+            </Card>
+            {/* Experience Gallery */}
+            <Card className="border-coral-accent/10">
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg">Experience & Training Gallery</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-2 gap-3">
+                  {galleryImages.map((img, index) => (
+                    <div
+                      key={index}
+                      className="group relative aspect-video overflow-hidden rounded-md border border-border/50 bg-muted"
+                    >
+                      <Image
+                        src={img.src}
+                        alt={img.alt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        sizes="(max-width: 768px) 50vw, 25vw"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>

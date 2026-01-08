@@ -30,15 +30,13 @@ export function HeroSection() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
                 <span className="block">Master Revit API &</span>
                 <span className="block text-gradient">
-                  Build Powerful BIM Apps
+                  Build Powerful BIM Apps With AI
                 </span>
               </h1>
 
               {/* Sub-headline */}
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                <span className="font-semibold text-foreground">Stop clicking. Start coding.</span>{' '}
-                Transition from a BIM User to a High-Paid BIM Developer. Learn C#, .NET, and WPF to
-                automate the impossible.
+                Create applications in <span className="text-foreground font-semibold">minutes</span>, not days, months, or years—by leveraging the power of <span className="text-coral-accent font-semibold">AI</span>.
               </p>
             </div>
 
@@ -49,7 +47,7 @@ export function HeroSection() {
                 className="text-lg px-8 glow-coral group"
                 onClick={() => scrollToSection('curriculum')}
               >
-                Start Your Developer Journey
+                Learn now for free
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
 
@@ -60,7 +58,7 @@ export function HeroSection() {
                 onClick={() => scrollToSection('projects')}
               >
                 <Play className="mr-2 h-5 w-5" />
-                View Student Projects
+                See the projects
               </Button>
             </div>
 
@@ -73,10 +71,6 @@ export function HeroSection() {
               <div className="flex items-center gap-2">
                 <div className="h-2 w-2 rounded-full bg-coral-accent" />
                 <span>500+ graduates</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-bronze-accent" />
-                <span>12-week program</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { Course, CurriculumSection, Lesson } from '@/types/course';
 
-const API_URL = 'https://api.bimspeed.net/v1/api/Course/lap-trinh-revit-api-cho-moi-version-revit';
+const API_URL = 'https://api.bimspeed.net/v1/api/Course/ai-for-bim-developer-vibe-coding-2025';
 
 interface ApiLessonDto {
     id: string;
@@ -97,7 +97,44 @@ function formatDuration(timeString: string): string {
     const minutes = parseInt(timeString, 10);
     if (isNaN(minutes)) return "00:00:00";
 
+
     const h = Math.floor(minutes / 60);
     const m = minutes % 60;
     return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:00`;
+}
+
+export interface CourseSummary {
+    id: string;
+    title: string;
+    badge: string;
+    image: string;
+    slug: string;
+}
+
+export async function getAllCourses(): Promise<CourseSummary[]> {
+    try {
+        const res = await fetch('https://api.bimspeed.net/v1/api/Course', { next: { revalidate: 3600 } });
+
+        if (!res.ok) {
+            console.error('Failed to fetch courses list');
+            return [];
+        }
+
+        const json: { data: any[], succeeded: boolean } = await res.json();
+
+        if (!json.succeeded || !Array.isArray(json.data)) {
+            return [];
+        }
+
+        return json.data.map((item: any) => ({
+            id: item.id,
+            title: item.name,
+            badge: item.originalPrice === 0 ? 'Free 100%' : 'Premium', // Logic can be adjusted
+            image: item.imagePath || '/images/course-1.jpg', // Fallback image
+            slug: item.slug
+        }));
+    } catch (error) {
+        console.error('Error fetching courses list:', error);
+        return [];
+    }
 }

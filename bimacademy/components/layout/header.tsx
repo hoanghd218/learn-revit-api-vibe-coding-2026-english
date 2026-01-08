@@ -94,7 +94,7 @@ export function Header({ className }: HeaderProps) {
                     <Link href="/sign-in">Sign In</Link>
                   </Button>
                   <Button asChild className="glow-coral" size="sm">
-                    <Link href="/sign-up">Start Your Journey</Link>
+                    <Link href="/sign-up">Learn Now for Free</Link>
                   </Button>
                 </>
               )
