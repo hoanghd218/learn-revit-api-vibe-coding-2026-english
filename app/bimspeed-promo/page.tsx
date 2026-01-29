@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { HeroSection } from "./components/hero-section";
 import { RegistrationForm } from "./components/registration-form";
 import { VideoGrid } from "./components/video-grid";
+import Link from "next/link";
+import { Code2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Get 3 Months BIMSpped Pro Free | BIM Developer Academy",
@@ -15,6 +17,29 @@ export const metadata: Metadata = {
 export default function BIMSppedPromoPage() {
   return (
     <main className="min-h-screen bg-background">
+      {/* Header with Logo */}
+      <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo - Link back to homepage */}
+            <Link
+              href="/"
+              className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity group"
+            >
+              <Code2 className="h-6 w-6 text-coral-accent group-hover:scale-110 transition-transform" />
+              <span className="text-lg font-bold text-gradient">
+                BIM Developer
+              </span>
+            </Link>
+
+            {/* Optional: Add a subtitle or tagline */}
+            <div className="text-sm text-muted-foreground hidden sm:block">
+              BIMSpped Pro Special Offer
+            </div>
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section with Countdown */}
       <HeroSection />
 

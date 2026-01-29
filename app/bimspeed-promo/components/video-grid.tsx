@@ -6,38 +6,27 @@ interface Video {
   description?: string;
 }
 
-// Placeholder for YouTube video URLs - to be provided by user
-// Format: just the video ID from YouTube URL (e.g., "dQw4w9WgXcQ")
+// YouTube video IDs from provided URLs
 const VIDEOS: Video[] = [
   {
-    id: "VIDEO_ID_1",
+    id: "d_QFuKtWBmQ",
     title: "BIMSpped Pro Overview",
     description: "See how BIMSpped Pro transforms your Revit workflow",
   },
   {
-    id: "VIDEO_ID_2",
+    id: "1MNPVhubQto",
     title: "Quick Start Guide",
     description: "Get up and running with BIMSpped in minutes",
   },
   {
-    id: "VIDEO_ID_3",
+    id: "47mwUYIWPDQ",
     title: "Advanced Features",
     description: "Unlock the full potential of BIMSpped Pro",
   },
   {
-    id: "VIDEO_ID_4",
+    id: "ObR5vuVkbqY",
     title: "Customer Success Story",
     description: "How firms are saving hours with BIMSpped",
-  },
-  {
-    id: "VIDEO_ID_5",
-    title: "Plugin Tutorial",
-    description: "Step-by-step guide to using key features",
-  },
-  {
-    id: "VIDEO_ID_6",
-    title: "Tips & Tricks",
-    description: "Pro tips for maximizing productivity",
   },
 ];
 
@@ -85,15 +74,6 @@ export function VideoGrid() {
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Placeholder notice for user */}
-      <div className="mt-8 p-4 bg-muted/50 rounded-lg border border-dashed border-border">
-        <p className="text-sm text-muted-foreground text-center">
-          <strong>Note:</strong> Replace VIDEO_ID placeholders in
-          `app/bimspeed-promo/components/video-grid.tsx` with actual YouTube
-          video IDs.
-        </p>
       </div>
     </div>
   );
