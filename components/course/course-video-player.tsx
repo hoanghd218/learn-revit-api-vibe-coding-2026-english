@@ -72,7 +72,7 @@ export function VideoPreview({ course, videoUrl }: VideoPreviewProps) {
             href={normalizedUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-foreground hover:text-coral-accent transition-colors"
+            className="flex items-center gap-1 text-foreground hover:text-[var(--orange-red-accent)] transition-colors"
           >
             {videoId ? (
               <>

@@ -166,7 +166,7 @@ export function PricingSection() {
                           <Check
                             className={cn(
                               'h-5 w-5 flex-shrink-0 mt-0.5',
-                              tier.highlighted ? 'text-primary' : 'text-[#4EC9B0]'
+                              tier.highlighted ? 'text-primary' : 'text-[var(--teal-accent)]'
                             )}
                           />
                           <span

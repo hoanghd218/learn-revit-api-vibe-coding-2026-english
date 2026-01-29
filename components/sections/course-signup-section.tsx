@@ -42,7 +42,7 @@ export function CourseSignupSection() {
     return (
         <section id="course-signup" className="relative py-16 md:py-20">
             {/* Background gradient */}
-            <div className="absolute inset-0 bg-linear-to-br from-[rgba(217,119,87,0.05)] via-background to-[rgba(212,162,127,0.03)] -z-10" />
+            <div className="absolute inset-0 bg-linear-to-br from-[rgba(232,93,4,0.05)] via-background to-[rgba(0,119,182,0.03)] -z-10" />
 
             <Container size="xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -56,12 +56,12 @@ export function CourseSignupSection() {
                             {lessons.map((lesson) => (
                                 <div
                                     key={lesson.id}
-                                    className="flex gap-4 p-4 rounded-xl bg-card/50 border border-border hover:border-coral-accent transition-all duration-300 hover-lift group cursor-pointer last:mb-2"
+                                    className="flex gap-4 p-4 rounded-xl bg-card/50 border border-border hover:border-[var(--orange-red-accent)] transition-all duration-300 hover-lift group cursor-pointer last:mb-2"
                                 >
                                     {/* Thumbnail placeholder */}
                                     <div className="shrink-0 w-20 h-14 rounded-lg bg-muted flex items-center justify-center overflow-hidden">
-                                        <div className="w-full h-full bg-linear-to-br from-coral-accent/20 to-bronze-accent/20 flex items-center justify-center">
-                                            <span className="text-2xl text-coral-accent/60">🎬</span>
+                                        <div className="w-full h-full bg-linear-to-br from-[var(--orange-red-accent)]/20 to-[var(--ocean-blue-accent)]/20 flex items-center justify-center">
+                                            <span className="text-2xl text-[var(--orange-red-accent)]/60">🎬</span>
                                         </div>
                                     </div>
 
@@ -70,7 +70,7 @@ export function CourseSignupSection() {
                                         <div className="flex items-center justify-between mb-1">
                                             <Badge
                                                 variant="outline"
-                                                className="text-[10px] px-1.5 py-0 leading-none bg-[#4EC9B0]/10 text-[#4EC9B0] border-[#4EC9B0]/30"
+                                                className="text-[10px] px-1.5 py-0 leading-none bg-[var(--teal-accent)]/10 text-[var(--teal-accent)] border-[var(--teal-accent)]/30"
                                             >
                                                 {lesson.badge}
                                             </Badge>
@@ -105,7 +105,7 @@ export function CourseSignupSection() {
                                         variant={activeTab === 'register' ? 'default' : 'outline'}
                                         size="sm"
                                         onClick={() => setActiveTab('register')}
-                                        className={activeTab === 'register' ? 'glow-coral' : ''}
+                                        className={activeTab === 'register' ? 'button-hover-shadow' : ''}
                                     >
                                         Register
                                     </Button>
@@ -113,7 +113,7 @@ export function CourseSignupSection() {
                                         variant={activeTab === 'login' ? 'default' : 'outline'}
                                         size="sm"
                                         onClick={() => setActiveTab('login')}
-                                        className={activeTab === 'login' ? 'glow-coral' : ''}
+                                        className={activeTab === 'login' ? 'button-hover-shadow' : ''}
                                     >
                                         Login
                                     </Button>
@@ -122,7 +122,7 @@ export function CourseSignupSection() {
                                 {/* Custom Auth Forms or Welcome Back */}
                                 {isSignedIn ? (
                                     <div className="py-8 text-center space-y-6">
-                                        <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-coral-accent/10 text-coral-accent">
+                                        <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-[var(--orange-red-accent)]/10 text-[var(--orange-red-accent)]">
                                             <span className="text-4xl">👋</span>
                                         </div>
                                         <div className="space-y-2">
@@ -131,7 +131,7 @@ export function CourseSignupSection() {
                                                 You're already signed in. Continue your learning journey.
                                             </p>
                                         </div>
-                                        <Button asChild className="w-full glow-coral" size="lg">
+                                        <Button asChild className="w-full button-hover-shadow" size="lg">
                                             <Link href="/courses">Go to My Courses</Link>
                                         </Button>
                                     </div>

@@ -115,7 +115,7 @@ export function InstructorSection() {
   });
 
   return (
-    <Section id="instructor" contained className="bg-section-light">
+    <Section id="instructor" contained className="bg-muted">
       <Container>
         <SectionHeading
           level={2}
@@ -127,10 +127,10 @@ export function InstructorSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: Profile Card */}
           <div ref={profileRef as any}>
-            <Card className="border-coral-accent/20 hover:border-coral-accent/40 transition-colors">
+            <Card className="border-[var(--orange-red-accent)]/20 hover:border-[var(--orange-red-accent)]/40 transition-colors">
               <CardHeader>
                 {/* Profile Image */}
-                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-coral-accent via-bronze-accent to-coral-accent p-1 overflow-hidden">
+                <div className="relative w-32 h-32 mx-auto mb-6 rounded-full bg-linear-to-br from-[var(--orange-red-accent)] via-[var(--ocean-blue-accent)] to-[var(--orange-red-accent)] p-1 overflow-hidden">
                   <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden relative">
                     <Image
                       src="/hoang/avatar.png"
@@ -180,7 +180,7 @@ export function InstructorSection() {
                         className="flex items-start gap-3 p-3 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
                       >
                         <div className="mt-1">
-                          <Icon className="h-5 w-5 text-coral-accent" />
+                          <Icon className="h-5 w-5 text-[var(--orange-red-accent)]" />
                         </div>
                         <div>
                           <p className="font-semibold text-sm">{credential.title}</p>
@@ -196,8 +196,8 @@ export function InstructorSection() {
                 {/* Quote */}
                 <div className="pt-6 border-t border-border/50">
                   <p className="text-sm italic text-muted-foreground">
-                    "BimSpeed specializes in <span className="text-coral-accent font-semibold">BIM AI solutions</span> for the
-                    construction sector in Vietnam, helping thousands <span className="text-bronze-accent font-semibold">automate their workflows</span>."
+                    "BimSpeed specializes in <span className="text-[var(--orange-red-accent)] font-semibold">BIM AI solutions</span> for the
+                    construction sector in Vietnam, helping thousands <span className="text-[var(--ocean-blue-accent)] font-semibold">automate their workflows</span>."
                   </p>
                 </div>
               </CardContent>
@@ -210,7 +210,7 @@ export function InstructorSection() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Award className="h-5 w-5 text-bronze-accent" />
+                  <Award className="h-5 w-5 text-[var(--ocean-blue-accent)]" />
                   Notable Projects & Achievements
                 </CardTitle>
               </CardHeader>
@@ -218,7 +218,7 @@ export function InstructorSection() {
                 <ul className="space-y-3">
                   {achievements.map((achievement, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-[#4EC9B0] mt-0.5 shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-[var(--teal-accent)] mt-0.5 shrink-0" />
                       <span className="text-sm text-muted-foreground">{achievement}</span>
                     </li>
                   ))}
@@ -227,9 +227,9 @@ export function InstructorSection() {
             </Card>
 
             {/* Why Learn From Me */}
-            <Card className="border-bronze-accent/20">
+            <Card className="border-[var(--ocean-blue-accent)]/20">
               <CardHeader>
-                <Badge className="w-fit mb-2 bg-coral-accent/20 text-coral-accent border-coral-accent/50">
+                <Badge className="w-fit mb-2 bg-[var(--orange-red-accent)]/20 text-[var(--orange-red-accent)] border-[var(--orange-red-accent)]/50">
                   Professional Profile
                 </Badge>
                 <CardTitle>About Alex Hoang</CardTitle>
@@ -251,7 +251,7 @@ export function InstructorSection() {
               </CardContent>
             </Card>
             {/* Experience Gallery */}
-            <Card className="border-coral-accent/10">
+            <Card className="border-[var(--orange-red-accent)]/10">
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg">Experience & Training Gallery</CardTitle>
               </CardHeader>

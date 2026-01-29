@@ -23,7 +23,7 @@ export default function SignInPage() {
 
         <p className="text-center mt-6 text-sm text-muted-foreground">
           Don't have an account?{' '}
-          <Link href="/sign-up" className="text-coral-accent hover:text-coral-accent/80">
+          <Link href="/sign-up" className="text-[var(--orange-red-accent)] hover:text-[var(--orange-red-accent)]/80">
             Sign up
           </Link>
         </p>

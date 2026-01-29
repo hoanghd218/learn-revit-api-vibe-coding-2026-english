@@ -17,9 +17,9 @@ export function HeroSection() {
 
   return (
     <section id="hero" className="relative py-16 md:py-20 min-h-[70vh] flex items-center">
-      {/* Background gradient - subtle coral/bronze glow */}
-      <div className="absolute inset-0 bg-linear-to-br from-[rgba(217,119,87,0.08)] via-background to-[rgba(212,162,127,0.05)] -z-10" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[rgba(217,119,87,0.12)] via-transparent to-transparent -z-10" />
+      {/* Background gradient - subtle orange-red/ocean-blue glow */}
+      <div className="absolute inset-0 bg-linear-to-br from-[rgba(232,93,4,0.08)] via-background to-[rgba(0,119,182,0.05)] -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[rgba(232,93,4,0.12)] via-transparent to-transparent -z-10" />
 
       <Container size="xl">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -36,15 +36,15 @@ export function HeroSection() {
 
               {/* Sub-headline */}
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0">
-                Create applications in <span className="text-foreground font-semibold">minutes</span>, not days, months, or years—by leveraging the power of <span className="text-coral-accent font-semibold">AI</span>.
+                Create applications in <span className="text-foreground font-semibold">minutes</span>, not days, months, or years—by leveraging the power of <span className="text-[var(--orange-red-accent)] font-semibold">AI</span>.
               </p>
             </div>
 
-            {/* CTAs - coral glow on primary */}
+            {/* CTAs - orange-red glow on primary */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="text-lg px-8 glow-coral group"
+                className="text-lg px-8 button-hover-shadow group"
                 onClick={() => scrollToSection('curriculum')}
               >
                 Learn now for free
@@ -54,7 +54,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 border-border hover:border-coral-accent hover:bg-muted/50"
+                className="text-lg px-8 border-border hover:border-[var(--orange-red-accent)] hover:bg-muted/50"
                 onClick={() => scrollToSection('projects')}
               >
                 <Play className="mr-2 h-5 w-5" />
@@ -62,14 +62,14 @@ export function HeroSection() {
               </Button>
             </div>
 
-            {/* Trust indicators - coral/bronze dots */}
+            {/* Trust indicators - teal/orange-red dots */}
             <div className="flex flex-wrap gap-8 justify-center lg:justify-start text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-[#4EC9B0]" />
+                <div className="h-2 w-2 rounded-full bg-[var(--teal-accent)]" />
                 <span>98% success rate</span>
               </div>
               <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full bg-coral-accent" />
+                <div className="h-2 w-2 rounded-full bg-[var(--orange-red-accent)]" />
                 <span>500+ graduates</span>
               </div>
             </div>

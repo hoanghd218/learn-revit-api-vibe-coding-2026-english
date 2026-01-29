@@ -12,7 +12,7 @@ export function VideoSection() {
       <Container size="xl">
         {/* Section header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-coral-accent/10 text-coral-accent text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--orange-red-accent)]/10 text-[var(--orange-red-accent)] text-sm font-medium mb-4">
             <Play className="h-4 w-4" />
             <span>See the Course in Action</span>
           </div>
@@ -39,7 +39,7 @@ export function VideoSection() {
         <div className="text-center mt-8">
           <p className="text-muted-foreground">
             Ready to start your BIM Developer journey?{' '}
-            <a href="#curriculum" className="text-coral-accent hover:underline font-medium">
+            <a href="#curriculum" className="text-[var(--orange-red-accent)] hover:underline font-medium">
               Check out the curriculum →
             </a>
           </p>

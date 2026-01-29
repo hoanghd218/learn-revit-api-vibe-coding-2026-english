@@ -42,9 +42,8 @@ export function ProjectCard({
     <Card
       className={cn(
         'group overflow-hidden hover-lift',
-        'border-border/50 hover:border-coral-accent',
+        'border-border/50 hover:border-[var(--orange-red-accent)]',
         'transition-all duration-200',
-        'hover:glow-coral',
         className
       )}
     >

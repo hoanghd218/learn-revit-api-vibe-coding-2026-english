@@ -24,7 +24,7 @@ export function LessonItem({ lesson, lessonNumber, isActive = false, onClick }: 
       className={`
         group flex items-center gap-3 p-3 rounded-lg transition-all cursor-pointer
         ${isActive
-          ? 'bg-coral-accent/10 border border-coral-accent/30'
+          ? 'bg-[var(--orange-red-accent)]/10 border border-[var(--orange-red-accent)]/30'
           : 'hover:bg-muted/50 border border-transparent hover:border-border'
         }
         ${lesson.isLocked ? 'opacity-70 cursor-not-allowed' : ''}
@@ -34,10 +34,10 @@ export function LessonItem({ lesson, lessonNumber, isActive = false, onClick }: 
       <div className={`
         w-8 h-8 rounded-full flex items-center justify-center shrink-0 text-sm font-medium
         ${isActive
-          ? 'bg-coral-accent text-white'
+          ? 'bg-[var(--orange-red-accent)] text-white'
           : lesson.isLocked
             ? 'bg-muted text-muted-foreground'
-            : 'bg-muted/50 text-foreground group-hover:bg-coral-accent/20 group-hover:text-coral-accent'
+            : 'bg-muted/50 text-foreground group-hover:bg-[var(--orange-red-accent)]/20 group-hover:text-[var(--orange-red-accent)]'
         }
       `}>
         {lesson.isLocked ? (
@@ -53,7 +53,7 @@ export function LessonItem({ lesson, lessonNumber, isActive = false, onClick }: 
       <div className="flex-1 min-w-0">
         <h4 className={`
           text-sm font-medium truncate transition-colors
-          ${isActive ? 'text-coral-accent' : 'text-foreground group-hover:text-coral-accent'}
+          ${isActive ? 'text-[var(--orange-red-accent)]' : 'text-foreground group-hover:text-[var(--orange-red-accent)]'}
           ${lesson.isLocked ? 'text-muted-foreground' : ''}
         `}>
           {lesson.title}
@@ -66,7 +66,7 @@ export function LessonItem({ lesson, lessonNumber, isActive = false, onClick }: 
           variant="secondary"
           className={`
             text-xs px-2 py-0.5 h-5 shrink-0
-            ${lesson.badge === 'pro' ? 'bg-coral-accent text-white border-0' : ''}
+            ${lesson.badge === 'pro' ? 'bg-[var(--orange-red-accent)] text-white border-0' : ''}
             ${lesson.badge === 'free' ? 'bg-green-500/20 text-green-400 border border-green-500/30' : ''}
             ${lesson.badge === 'premium' ? 'bg-gold-accent/20 text-gold-accent border border-gold-accent/30' : ''}
           `}

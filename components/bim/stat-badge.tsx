@@ -36,9 +36,9 @@ export function StatBadge({
 }: StatBadgeProps) {
   const variantStyles = {
     default: 'bg-card hover:bg-muted border-border',
-    primary: 'bg-coral-accent/10 hover:bg-coral-accent/20 border-coral-accent/30 text-coral-accent',
-    accent: 'bg-bronze-accent/10 hover:bg-bronze-accent/20 border-bronze-accent/30 text-bronze-accent',
-    success: 'bg-[#4EC9B0]/10 hover:bg-[#4EC9B0]/20 border-[#4EC9B0]/30 text-[#4EC9B0]',
+    primary: 'bg-[var(--orange-red-accent)]/10 hover:bg-[var(--orange-red-accent)]/20 border-[var(--orange-red-accent)]/30 text-[var(--orange-red-accent)]',
+    accent: 'bg-[var(--ocean-blue-accent)]/10 hover:bg-[var(--ocean-blue-accent)]/20 border-[var(--ocean-blue-accent)]/30 text-[var(--ocean-blue-accent)]',
+    success: 'bg-[var(--teal-accent)]/10 hover:bg-[var(--teal-accent)]/20 border-[var(--teal-accent)]/30 text-[var(--teal-accent)]',
   };
 
   return (

@@ -51,7 +51,7 @@ const lessons: LessonItem[] = [
 
 export function LessonsList() {
   return (
-    <Section id="lessons" className="bg-section-light">
+    <Section id="lessons" className="bg-muted">
       <Container>
         <SectionHeading
           level={2}
@@ -69,19 +69,19 @@ export function LessonsList() {
                 className={cn(
                   'group relative flex items-start gap-4 p-4 rounded-lg',
                   'border border-border/40 bg-card/30',
-                  'hover:border-coral-accent/50 hover:bg-card/50',
+                  'hover:border-[var(--orange-red-accent)]/50 hover:bg-card/50',
                   'transition-all duration-300 cursor-pointer',
                   'hover-lift'
                 )}
               >
-                {/* Number Badge - Coral Gradient */}
+                {/* Number Badge - Gradient */}
                 <div
                   className={cn(
                     'flex-shrink-0 w-10 h-10 rounded-full',
-                    'bg-linear-to-br from-coral-accent to-bronze-accent',
+                    'bg-linear-to-br from-[var(--orange-red-accent)] to-[var(--ocean-blue-accent)]',
                     'flex items-center justify-center',
                     'text-background font-bold text-lg',
-                    'shadow-lg shadow-coral-accent/20',
+                    'shadow-lg shadow-[var(--orange-red-accent)]/20',
                     'group-hover:scale-110 transition-transform duration-300'
                   )}
                 >
@@ -91,7 +91,7 @@ export function LessonsList() {
                 {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2">
-                    <h3 className="text-lg font-semibold text-foreground group-hover:text-coral-accent transition-colors">
+                    <h3 className="text-lg font-semibold text-foreground group-hover:text-[var(--orange-red-accent)] transition-colors">
                       {lesson.title}
                     </h3>
                     <span className="text-xs text-muted-foreground bg-muted/50 px-2 py-1 rounded">
@@ -106,7 +106,7 @@ export function LessonsList() {
                         key={idx}
                         className="inline-flex items-center gap-1 text-xs text-muted-foreground"
                       >
-                        <CheckCircle2 className="h-3 w-3 text-coral-accent/60" />
+                        <CheckCircle2 className="h-3 w-3 text-[var(--orange-red-accent)]/60" />
                         {topic}
                       </span>
                     ))}
@@ -114,7 +114,7 @@ export function LessonsList() {
                 </div>
 
                 {/* Arrow Icon */}
-                <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground/50 group-hover:text-coral-accent group-hover:translate-x-1 transition-all duration-300 opacity-0 group-hover:opacity-100" />
+                <ChevronRight className="absolute right-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground/50 group-hover:text-[var(--orange-red-accent)] group-hover:translate-x-1 transition-all duration-300 opacity-0 group-hover:opacity-100" />
               </div>
             ))}
           </div>
@@ -123,7 +123,7 @@ export function LessonsList() {
           <div className="mt-8 text-center">
             <p className="text-sm text-muted-foreground">
               <span className="text-foreground font-medium">12 weeks</span> total program •{' '}
-              <span className="text-coral-accent">5 real-world projects</span>
+              <span className="text-[var(--orange-red-accent)]">5 real-world projects</span>
             </p>
           </div>
         </div>

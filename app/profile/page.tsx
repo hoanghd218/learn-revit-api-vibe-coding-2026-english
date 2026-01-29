@@ -97,7 +97,7 @@ export default function ProfilePage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <User className="h-5 w-5 text-coral-accent" />
+                <User className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 Profile Picture
               </CardTitle>
               <CardDescription>
@@ -115,7 +115,7 @@ export default function ProfilePage() {
                   <Button
                     size="sm"
                     variant="outline"
-                    className="absolute -bottom-2 -right-2 h-8 w-8 rounded-full p-0 border-coral-accent"
+                    className="absolute -bottom-2 -right-2 h-8 w-8 rounded-full p-0 border-[var(--orange-red-accent)]"
                   >
                     <Upload className="h-4 w-4" />
                   </Button>
@@ -127,7 +127,7 @@ export default function ProfilePage() {
                   <p className="text-sm text-muted-foreground">
                     {user.email}
                   </p>
-                  <Button variant="link" size="sm" className="text-coral-accent h-auto p-0 mt-1">
+                  <Button variant="link" size="sm" className="text-[var(--orange-red-accent)] h-auto p-0 mt-1">
                     Change avatar
                   </Button>
                 </div>
@@ -253,7 +253,7 @@ export default function ProfilePage() {
 
               <div className="space-y-2">
                 <Label htmlFor="website" className="flex items-center gap-2">
-                  <Globe className="h-4 w-4 text-coral-accent" />
+                  <Globe className="h-4 w-4 text-[var(--orange-red-accent)]" />
                   Website
                 </Label>
                 <Input
@@ -271,7 +271,7 @@ export default function ProfilePage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Lock className="h-5 w-5 text-coral-accent" />
+                <Lock className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 Account Settings
               </CardTitle>
               <CardDescription>
@@ -283,7 +283,7 @@ export default function ProfilePage() {
                 <h4 className="text-sm font-medium text-foreground">
                   Password
                 </h4>
-                <Button variant="outline" className="border-coral-accent text-coral-accent hover:bg-coral-accent/10">
+                <Button variant="outline" className="border-[var(--orange-red-accent)] text-[var(--orange-red-accent)] hover:bg-[var(--orange-red-accent)]/10">
                   Change Password
                 </Button>
               </div>
@@ -292,7 +292,7 @@ export default function ProfilePage() {
 
               <div className="space-y-4">
                 <h4 className="text-sm font-medium text-foreground flex items-center gap-2">
-                  <Bell className="h-4 w-4 text-coral-accent" />
+                  <Bell className="h-4 w-4 text-[var(--orange-red-accent)]" />
                   Notifications
                 </h4>
                 <div className="space-y-3">
@@ -301,7 +301,7 @@ export default function ProfilePage() {
                       type="checkbox"
                       checked={formData.emailNotifications}
                       onChange={(e) => updateField('emailNotifications', e.target.checked)}
-                      className="h-4 w-4 rounded border-border bg-input text-coral-accent focus:ring-coral-accent"
+                      className="h-4 w-4 rounded border-border bg-input text-[var(--orange-red-accent)] focus:ring-[var(--orange-red-accent)]"
                     />
                     <span className="text-sm text-foreground">
                       Email notifications
@@ -312,7 +312,7 @@ export default function ProfilePage() {
                       type="checkbox"
                       checked={formData.courseUpdates}
                       onChange={(e) => updateField('courseUpdates', e.target.checked)}
-                      className="h-4 w-4 rounded border-border bg-input text-coral-accent focus:ring-coral-accent"
+                      className="h-4 w-4 rounded border-border bg-input text-[var(--orange-red-accent)] focus:ring-[var(--orange-red-accent)]"
                     />
                     <span className="text-sm text-foreground">
                       Course updates and announcements
@@ -323,7 +323,7 @@ export default function ProfilePage() {
                       type="checkbox"
                       checked={formData.affiliateAlerts}
                       onChange={(e) => updateField('affiliateAlerts', e.target.checked)}
-                      className="h-4 w-4 rounded border-border bg-input text-coral-accent focus:ring-coral-accent"
+                      className="h-4 w-4 rounded border-border bg-input text-[var(--orange-red-accent)] focus:ring-[var(--orange-red-accent)]"
                     />
                     <span className="text-sm text-foreground">
                       Affiliate commission alerts
@@ -339,7 +339,7 @@ export default function ProfilePage() {
             <Button
               onClick={handleSave}
               disabled={isSaving}
-              className="glow-coral"
+              className="button-hover-shadow"
             >
               {isSaving ? (
                 <>
