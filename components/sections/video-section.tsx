@@ -28,7 +28,7 @@ export function VideoSection() {
         <div className="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden border border-border bg-card shadow-lg">
           <iframe
             className="w-full h-full"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            src="https://www.youtube.com/embed/d_QFuKtWBmQ"
             title="Course Preview Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
