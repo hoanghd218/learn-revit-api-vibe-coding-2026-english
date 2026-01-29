@@ -51,53 +51,89 @@
 }
 
 :root {
-  /* ClaudeKit Dark Theme - Coral & Bronze Accents */
-  --background: #1A1A1A;              /* Improved: +11% brightness */
-  --foreground: #FAFAFA;              /* White/off-white text */
-  --card: #242424;                    /* Improved: +8% brightness */
-  --card-foreground: #FAFAFA;
-  --popover: #2E2E2E;                 /* Improved: +8% brightness */
-  --popover-foreground: #FAFAFA;
-  --primary: #D97757;                 /* Coral - primary accent */
-  --primary-foreground: #FFFFFF;
-  --secondary: #2E2E2E;
-  --secondary-foreground: #FAFAFA;
-  --muted: #333333;                   /* Improved: +6% brightness */
-  --muted-foreground: #B4B4B8;        /* Improved: brighter muted text */
-  --accent: #D4A27F;                  /* Bronze - secondary accent */
-  --accent-foreground: #000000;
+  /* === Light Theme Foundation === */
+  --background: #FFFFFF;              /* Pure white background */
+  --foreground: #1A1A1A;              /* Near black text - WCAG AAA ✅ */
+
+  /* Cards & Popovers */
+  --card: #FFFFFF;                    /* White cards */
+  --card-foreground: #1A1A1A;         /* Near black text */
+  --popover: #FFFFFF;                 /* White popovers */
+  --popover-foreground: #1A1A1A;      /* Near black text */
+
+  /* Primary Accent: Orange-Red #E85D04 */
+  --primary: #E85D04;                 /* Orange-red - primary accent */
+  --primary-foreground: #FFFFFF;      /* White text (large text only) */
+  --primary-hover: #D74E00;           /* Darker variant for hover */
+
+  /* Secondary */
+  --secondary: #F3F4F6;               /* Light gray for sections */
+  --secondary-foreground: #1A1A1A;    /* Near black text */
+
+  /* Muted Colors */
+  --muted: #F9FAFB;                   /* Very light gray */
+  --muted-foreground: #6B7280;        /* Medium gray - WCAG AA (5.7:1) */
+
+  /* Accent: Ocean Blue #0077B6 */
+  --accent: #0077B6;                  /* Ocean blue - decorative only */
+  --accent-foreground: #1A1A1A;       /* Dark text on light blue backgrounds */
+  --accent-hover: #005F92;            /* Darker variant for text overlays - WCAG AA ✅ */
+
+  /* Destructive: Red */
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: #404040;                  /* Improved: better definition */
-  --input: #404040;
-  --ring: #D97757;                    /* Focus ring - coral */
 
-  /* Chart colors - coral/bronze palette */
-  --chart-1: #D97757;                /* Coral */
-  --chart-2: #D4A27F;                /* Bronze */
-  --chart-3: #4EC9B0;                /* Keep green for success */
-  --chart-4: #DCDCAA;                /* Yellow */
-  --chart-5: #CE9178;                /* Orange */
+  /* Borders & Inputs */
+  --border: #E5E7EB;                  /* Subtle gray border */
+  --input: #E5E7EB;                   /* Same as border */
+  --ring: #E85D04;                    /* Focus ring - orange-red */
 
+  /* Chart Colors - Orange-Red/Ocean-Blue/Teal Palette */
+  --chart-1: #E85D04;                /* Orange-red */
+  --chart-2: #0077B6;                /* Ocean blue */
+  --chart-3: #2A9D8F;                /* Teal */
+  --chart-4: #F59E0B;                /* Gold/amber */
+  --chart-5: #10B981;                /* Emerald green */
+
+  /* Border Radius */
   --radius: 0.5rem;
 
   /* Sidebar */
-  --sidebar: #242424;                    /* Improved: +8% brightness */
-  --sidebar-foreground: #FAFAFA;
-  --sidebar-primary: #D97757;
+  --sidebar: #FFFFFF;                /* White sidebar */
+  --sidebar-foreground: #1A1A1A;     /* Near black text */
+  --sidebar-primary: #E85D04;        /* Orange-red */
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #2E2E2E;             /* Improved: +8% brightness */
-  --sidebar-accent-foreground: #FAFAFA;
-  --sidebar-border: #404040;             /* Improved: better definition */
-  --sidebar-ring: #D97757;
+  --sidebar-accent: #F3F4F6;         /* Light gray */
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5E7EB;         /* Subtle border */
+  --sidebar-ring: #E85D04;           /* Orange-red focus */
 
-  /* Font families */
+  /* Font Families */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
 
-  /* Coral accent for gradients */
-  --coral-accent: #D97757;
-  --bronze-accent: #D4A27F;
+  /* === Accent Color Variables (Renamed for Clarity) === */
+  --orange-red-accent: #E85D04;           /* Primary CTA color */
+  --orange-red-accent-hover: #D74E00;     /* Darker hover state */
+  --orange-red-accent-light: #FFF0E6;     /* Background variant */
+
+  --ocean-blue-accent: #0077B6;           /* Secondary accent */
+  --ocean-blue-accent-dark: #005F92;      /* Text overlay variant - WCAG AA ✅ */
+  --ocean-blue-accent-light: #E0F2FE;     /* Background variant */
+
+  --teal-accent: #2A9D8F;                /* Tertiary accent */
+  --teal-accent-dark: #207A6E;           /* Text overlay variant - WCAG AA ✅ */
+  --teal-accent-light: #E6F7F5;          /* Background variant */
+
+  /* === Semantic Colors === */
+  --color-success: #2A9D8F;              /* Teal for success */
+  --color-success-light: #E6F7F5;
+  --color-warning: #E85D04;              /* Orange-red for warning */
+  --color-warning-light: #FFF0E6;
+  --color-error: #DC2626;                /* Red for error */
+  --color-error-light: #FEE2E2;
+  --color-info: #0077B6;                 /* Ocean blue for info */
+  --color-info-light: #E0F2FE;
 
   /* Course page specific colors */
   --purple-primary: #7C3AED;
@@ -106,20 +142,16 @@
   --gold-accent: #F59E0B;
   --gold-light: #FBBF24;
   --gold-dark: #D97706;
-  --video-bg: #0F172A;
-  --panel-bg: #FFFFFF;
-  --pro-badge: #D97757;
-  --free-badge: #D4A27F;
-  --premium-badge: #F59E0B;
+  --video-bg: #F9FAFB;                  /* Light gray for video bg */
+  --panel-bg: #FFFFFF;                  /* White panels */
+  --pro-badge: #E85D04;                 /* Orange-red */
+  --free-badge: #0077B6;                /* Ocean blue */
+  --premium-badge: #F59E0B;             /* Gold */
 
-  /* Section alternating backgrounds */
-  --section-dark: #1E1E1E;              /* Improved: more depth */
-  --section-light: #222222;             /* Improved: more depth */
-}
-
-/* Dark mode class - same as root since we're always dark */
-.dark {
-  /* Dark theme is default, no changes needed */
+  /* === Section Backgrounds === */
+  --section-light: #FFFFFF;             /* Pure white */
+  --section-gray: #F9FAFB;              /* Very light gray */
+  --section-alt: #F3F4F6;               /* Light gray */
 }
 
 @layer base {
@@ -135,32 +167,58 @@
   }
 }
 
-/* ClaudeKit-style utility classes */
+/* Light theme utility classes */
 @layer utilities {
-  /* Gradient text - coral to bronze */
+  /* Gradient text - orange-red to ocean-blue */
   .text-gradient {
-    background: linear-gradient(to right, var(--coral-accent), var(--bronze-accent));
+    background: linear-gradient(to right, #E85D04, #0077B6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* Coral glow effect */
-  .glow-coral {
-    box-shadow: 0 0 20px rgba(217, 119, 87, 0.3);  /* Reduced for lighter bg */
-  }
-  .glow-coral-lg {
-    box-shadow: 0 0 30px rgba(217, 119, 87, 0.4);  /* Reduced for lighter bg */
+  /* === Light Theme Shadow System === */
+  .shadow-light {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   }
 
-  /* Bronze glow effect */
-  .glow-bronze {
-    box-shadow: 0 0 20px rgba(212, 162, 127, 0.3);  /* Reduced for lighter bg */
+  .shadow-light-md {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   }
 
-  /* Icon background with gradient */
+  .shadow-light-lg {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+  }
+
+  /* Card with border + shadow */
+  .card-light {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 200ms ease, border-color 200ms ease;
+  }
+
+  .card-light:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    border-color: #E85D04;  /* Orange-red border on hover */
+  }
+
+  /* Button hover shadow for light theme */
+  .button-hover-shadow {
+    transition: box-shadow 200ms ease;
+  }
+
+  .button-hover-shadow:hover {
+    box-shadow: 0 4px 6px rgba(232, 93, 4, 0.15);  /* Subtle orange-red shadow */
+  }
+
+  /* Icon background - subtle gradient */
   .icon-bg-gradient {
-    background: linear-gradient(to bottom right, rgba(217, 119, 87, 0.2), rgba(212, 162, 127, 0.1));
+    background: linear-gradient(
+      to bottom right,
+      rgba(232, 93, 4, 0.1),
+      rgba(0, 119, 182, 0.05)
+    );
   }
 
   /* Hover lift effect for cards */
@@ -171,13 +229,13 @@
     transform: translateY(-4px);
   }
 
-  /* Card hover border effect - coral accent */
+  /* Card hover border effect - orange-red accent */
   .hover-border-coral {
     transition: border-color 200ms ease, box-shadow 200ms ease;
   }
   .hover-border-coral:hover {
-    border-color: var(--coral-accent);
-    box-shadow: 0 0 20px rgba(217, 119, 87, 0.15);  /* Reduced for lighter bg */
+    border-color: #E85D04;
+    box-shadow: 0 4px 6px rgba(232, 93, 4, 0.12);
   }
 
   /* Panel effect */
@@ -269,28 +327,47 @@
   .skeleton {
     background: linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.05) 25%,
-      rgba(255, 255, 255, 0.1) 50%,
-      rgba(255, 255, 255, 0.05) 75%
+      #F3F4F6 25%,
+      #E5E7EB 50%,
+      #F3F4F6 75%
     );
     background-size: 200% 100%;
     animation: shimmer 1.5s infinite;
   }
 
-  /* Custom thin scrollbar */
+  /* Custom thin scrollbar - Light theme */
   .custom-scrollbar::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;  /* Slightly wider for visibility on light bg */
   }
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+    background: #F3F4F6;  /* Light gray track */
   }
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: var(--border);
+    background: #D1D5DB;  /* Medium gray thumb */
     border-radius: 10px;
     transition: background 0.3s ease;
   }
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: var(--coral-accent);
+    background: #E85D04;  /* Orange-red on hover */
+  }
+
+  /* Global scrollbar for light theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F9FAFB;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D1D5DB;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9CA3AF;
   }
 
   /* Fade in animation for sections */
