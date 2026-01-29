@@ -30,8 +30,8 @@ const curriculumPhases: CurriculumPhase[] = [
     title: 'C# Foundation',
     subtitle: 'For Engineers',
     icon: Code,
-    color: 'from-coral-accent to-[#D97757]/80',
-    glowClass: 'glow-coral',
+    color: 'from-[var(--orange-red-accent)] to-[var(--orange-red-accent)]/80',
+    glowClass: '',
     duration: '1 week',
     learningOutcomes: [
       'Variables, loops, and conditionals explained for non-CS backgrounds',
@@ -46,8 +46,8 @@ const curriculumPhases: CurriculumPhase[] = [
     title: 'Revit API Mechanics',
     subtitle: 'Database & Transactions',
     icon: Database,
-    color: 'from-bronze-accent to-[#D4A27F]/80',
-    glowClass: 'glow-bronze',
+    color: 'from-[var(--ocean-blue-accent)] to-[var(--ocean-blue-accent)]/80',
+    glowClass: '',
     duration: '1 week',
     learningOutcomes: [
       'Understanding Revit database structure and element hierarchy',
@@ -62,8 +62,8 @@ const curriculumPhases: CurriculumPhase[] = [
     title: 'Professional UI/UX',
     subtitle: 'WPF & XAML',
     icon: Palette,
-    color: 'from-[#4EC9B0] to-[#4EC9B0]/80',
-    glowClass: 'glow-green',
+    color: 'from-[var(--teal-accent)] to-[var(--teal-accent)]/80',
+    glowClass: '',
     duration: '1 week',
     learningOutcomes: [
       'WPF fundamentals: Windows, controls, layouts',
@@ -78,8 +78,8 @@ const curriculumPhases: CurriculumPhase[] = [
     title: 'Advanced BIM Apps',
     subtitle: 'Production-Ready',
     icon: Rocket,
-    color: 'from-coral-accent to-bronze-accent',
-    glowClass: 'glow-coral',
+    color: 'from-[var(--orange-red-accent)] to-[var(--ocean-blue-accent)]',
+    glowClass: '',
     duration: '1 week',
     learningOutcomes: [
       'External Events: Keep UI responsive during long operations',
@@ -120,7 +120,7 @@ export function CurriculumSection() {
   const [hoveredPhase, setHoveredPhase] = useState<number | null>(null);
 
   return (
-    <Section id="curriculum" contained className="bg-section-dark">
+    <Section id="curriculum" contained className="bg-muted">
       <Container>
         <SectionHeading level={2} subtitle="4-phase learning path from beginner to professional">
           Curriculum Roadmap
@@ -138,9 +138,8 @@ export function CurriculumSection() {
                 onMouseLeave={() => setHoveredPhase(null)}
                 className={cn(
                   'group relative overflow-hidden transition-all duration-300',
-                  'border-border/50 hover:border-coral-accent',
-                  'cursor-pointer hover-lift hover-border-coral',
-                  isHovered && phase.glowClass
+                  'border-border/50 hover:border-[var(--orange-red-accent)]',
+                  'cursor-pointer hover-lift'
                 )}
               >
                 {/* Phase Number Badge */}
@@ -162,7 +161,7 @@ export function CurriculumSection() {
                     <Icon
                       className={cn(
                         'h-10 w-10 transition-all duration-300',
-                        isHovered ? 'text-coral-accent scale-110' : 'text-muted-foreground'
+                        isHovered ? 'text-[var(--orange-red-accent)] scale-110' : 'text-muted-foreground'
                       )}
                     />
                   </div>
@@ -187,11 +186,11 @@ export function CurriculumSection() {
                     )}
                   >
                     <div className="space-y-2 pt-2 border-t border-border/50">
-                      <p className="text-xs font-semibold text-coral-accent mb-3">What You'll Learn:</p>
+                      <p className="text-xs font-semibold text-[var(--orange-red-accent)] mb-3">What You'll Learn:</p>
                       <ul className="space-y-2">
                         {phase.learningOutcomes.map((outcome, index) => (
                           <li key={index} className="flex items-start gap-2 text-xs text-muted-foreground">
-                            <ChevronRight className="h-3 w-3 text-bronze-accent mt-0.5 flex-shrink-0" />
+                            <ChevronRight className="h-3 w-3 text-[var(--ocean-blue-accent)] mt-0.5 flex-shrink-0" />
                             <span>{outcome}</span>
                           </li>
                         ))}
@@ -225,7 +224,7 @@ export function CurriculumSection() {
         {/* Progression Indicator */}
         <div className="mt-12 text-center space-y-4">
           <p className="text-lg text-muted-foreground">
-            Complete all 4 phases in just <span className="font-bold text-coral-accent">12 weeks</span>
+            Complete all 4 phases in just <span className="font-bold text-[var(--orange-red-accent)]">12 weeks</span>
           </p>
           <div className="flex items-center justify-center gap-2">
             {[1, 2, 3, 4].map((phase, index) => (
@@ -233,7 +232,7 @@ export function CurriculumSection() {
                 <div
                   className={cn(
                     'h-2 w-2 rounded-full transition-colors',
-                    hoveredPhase === phase ? 'bg-coral-accent' : 'bg-muted-foreground/50'
+                    hoveredPhase === phase ? 'bg-[var(--orange-red-accent)]' : 'bg-muted-foreground/50'
                   )}
                 />
                 {index < 3 && (

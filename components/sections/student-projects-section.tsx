@@ -93,7 +93,7 @@ export function StudentProjectsSection() {
   });
 
   return (
-    <Section id="projects" contained className="bg-section-dark">
+    <Section id="projects" contained className="bg-muted">
       <Container>
         <SectionHeading level={2} subtitle="Real plugins built by students like you">
           Student Showcase
@@ -115,7 +115,7 @@ export function StudentProjectsSection() {
 
         {/* Metric Highlight */}
         <div ref={metricRef as any} className="mt-12 text-center">
-          <p className="text-2xl md:text-3xl font-bold text-coral-accent">
+          <p className="text-2xl md:text-3xl font-bold text-[var(--orange-red-accent)]">
             98% of graduates built their first functional plugin within 1 week
           </p>
         </div>

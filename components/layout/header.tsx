@@ -54,7 +54,7 @@ export function Header({ className }: HeaderProps) {
             href="/"
             className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <span className="text-2xl font-bold text-coral-accent font-mono">
+            <span className="text-2xl font-bold text-[var(--orange-red-accent)] font-mono">
               &lt;/&gt;
             </span>
             <span className="text-lg font-bold text-gradient">
@@ -66,19 +66,19 @@ export function Header({ className }: HeaderProps) {
           <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection('curriculum')}
-              className="text-sm text-muted-foreground hover:text-coral-accent transition-colors"
+              className="text-sm text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors"
             >
               Curriculum
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-sm text-muted-foreground hover:text-coral-accent transition-colors"
+              className="text-sm text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors"
             >
               Student Projects
             </button>
             <button
               onClick={() => scrollToSection('instructor')}
-              className="text-sm text-muted-foreground hover:text-coral-accent transition-colors"
+              className="text-sm text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors"
             >
               Instructor
             </button>
@@ -94,7 +94,7 @@ export function Header({ className }: HeaderProps) {
                   <Button asChild variant="ghost" size="sm">
                     <Link href="/sign-in">Sign In</Link>
                   </Button>
-                  <Button asChild className="glow-coral" size="sm">
+                  <Button asChild className="button-hover-shadow" size="sm">
                     <Link href="/sign-up">Learn Now for Free</Link>
                   </Button>
                 </>

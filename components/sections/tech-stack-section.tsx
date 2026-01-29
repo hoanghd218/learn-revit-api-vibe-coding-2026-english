@@ -92,7 +92,7 @@ function AnimatedTechCard({
  */
 export function TechStackSection() {
   return (
-    <Section id="tech-stack" contained className="bg-section-dark">
+    <Section id="tech-stack" contained className="bg-muted">
       <Container>
         <SectionHeading
           level={2}
@@ -132,19 +132,19 @@ export function TechStackSection() {
           </div>
 
           {/* Vibe Coding Highlight Card */}
-          <div className="relative group overflow-hidden rounded-2xl border border-coral-accent/20 bg-linear-to-br from-section-light/50 to-section-dark p-8 md:p-12 text-center max-w-4xl mx-auto transition-all duration-300 hover:border-coral-accent/40 hover:shadow-2xl hover:shadow-coral-accent/5">
+          <div className="relative group overflow-hidden rounded-2xl border border-[var(--orange-red-accent)]/20 bg-linear-to-br from-background/50 to-muted p-8 md:p-12 text-center max-w-4xl mx-auto transition-all duration-300 hover:border-[var(--orange-red-accent)]/40 hover:shadow-2xl hover:shadow-[var(--orange-red-accent)]/5">
             <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <Sparkles className="h-24 w-24 text-coral-accent" />
+              <Sparkles className="h-24 w-24 text-[var(--orange-red-accent)]" />
             </div>
 
             <p className="text-2xl font-bold text-foreground mb-4">
-              Don't just code. <span className="text-coral-accent italic">Vibe.</span>
+              Don't just code. <span className="text-[var(--orange-red-accent)] italic">Vibe.</span>
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               This course is built for the <span className="font-bold text-foreground">AI era</span>.
-              We'll show you how to leverage <span className="font-semibold text-foreground underline decoration-coral-accent/30">AI agents</span> to
+              We'll show you how to leverage <span className="font-semibold text-foreground underline decoration-[var(--orange-red-accent)]/30">AI agents</span> to
               automate your workflow, generate high-quality code, and build professional Revit add-ins
-              <span className="italic block mt-2 text-coral-accent">even if you've never written a line of code before.</span>
+              <span className="italic block mt-2 text-[var(--orange-red-accent)]">even if you've never written a line of code before.</span>
             </p>
           </div>
         </div>

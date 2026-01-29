@@ -66,7 +66,7 @@ export function PainPointsSection() {
   ];
 
   return (
-    <Section id="pain-points" contained className="bg-section-light">
+    <Section id="pain-points" contained className="bg-muted">
       <Container>
         <SectionHeading
           level={2}
@@ -81,8 +81,8 @@ export function PainPointsSection() {
               <Card
                 className={cn(
                   'group relative overflow-hidden h-full',
-                  'border-border/50 hover:border-coral-accent',
-                  'transition-all duration-300 hover-lift hover:glow-coral'
+                  'border-border/50 hover:border-[var(--orange-red-accent)]',
+                  'transition-all duration-300 hover-lift'
                 )}
               >
               <CardHeader>
@@ -90,7 +90,7 @@ export function PainPointsSection() {
                   <Badge variant="outline" className="bg-destructive/10 text-destructive border-destructive/50">
                     Problem
                   </Badge>
-                  <Zap className="h-4 w-4 text-coral-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <Zap className="h-4 w-4 text-[var(--orange-red-accent)] opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <CardTitle className="text-xl">{point.problem}</CardTitle>
               </CardHeader>
@@ -107,13 +107,13 @@ export function PainPointsSection() {
 
                 {/* Arrow */}
                 <div className="flex items-center justify-center">
-                  <ArrowRight className="h-5 w-5 text-coral-accent" />
+                  <ArrowRight className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 </div>
 
                 {/* New Way */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                    <Zap className="h-4 w-4 text-[#4EC9B0]" />
+                    <Zap className="h-4 w-4 text-[var(--teal-accent)]" />
                     <span>The Developer Way</span>
                   </div>
                   <p className="text-sm text-foreground pl-6">{point.newWay}</p>
@@ -121,7 +121,7 @@ export function PainPointsSection() {
 
                 {/* Metric Badge */}
                 <div className="pt-4 border-t border-border/50">
-                  <Badge className="bg-coral-accent/20 text-coral-accent border-coral-accent/50 font-bold">
+                  <Badge className="bg-[var(--orange-red-accent)]/20 text-[var(--orange-red-accent)] border-[var(--orange-red-accent)]/50 font-bold">
                     {point.metric}
                   </Badge>
                 </div>
@@ -137,9 +137,9 @@ export function PainPointsSection() {
             This isn't just about learning to code.
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            It's about <span className="text-bronze-accent font-semibold">multiplying your impact</span>,{' '}
-            <span className="text-coral-accent font-semibold">doubling your salary</span>, and becoming{' '}
-            <span className="text-[#4EC9B0] font-semibold">irreplaceable</span> in your organization.
+            It's about <span className="text-[var(--ocean-blue-accent)] font-semibold">multiplying your impact</span>,{' '}
+            <span className="text-[var(--orange-red-accent)] font-semibold">doubling your salary</span>, and becoming{' '}
+            <span className="text-[var(--teal-accent)] font-semibold">irreplaceable</span> in your organization.
           </p>
         </div>
       </Container>

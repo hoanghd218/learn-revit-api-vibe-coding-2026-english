@@ -28,9 +28,8 @@ export function TechCard({ name, logo, description, className }: TechCardProps) 
     <Card
       className={cn(
         'group hover-lift',
-        'border-border/50 hover:border-coral-accent',
+        'border-border/50 hover:border-[var(--orange-red-accent)]',
         'transition-all duration-200',
-        'hover:glow-coral',
         className
       )}
     >
