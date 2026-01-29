@@ -52,24 +52,24 @@
 
 :root {
   /* ClaudeKit Dark Theme - Coral & Bronze Accents */
-  --background: #0F0F0F;              /* Deep dark background */
+  --background: #1A1A1A;              /* Improved: +11% brightness */
   --foreground: #FAFAFA;              /* White/off-white text */
-  --card: #1A1A1A;                    /* Slightly lighter card bg */
+  --card: #242424;                    /* Improved: +8% brightness */
   --card-foreground: #FAFAFA;
-  --popover: #242424;                 /* Elevated surface */
+  --popover: #2E2E2E;                 /* Improved: +8% brightness */
   --popover-foreground: #FAFAFA;
   --primary: #D97757;                 /* Coral - primary accent */
   --primary-foreground: #FFFFFF;
-  --secondary: #242424;
+  --secondary: #2E2E2E;
   --secondary-foreground: #FAFAFA;
-  --muted: #2A2A2A;                   /* Muted background */
-  --muted-foreground: #A1A1AA;        /* Muted text */
+  --muted: #333333;                   /* Improved: +6% brightness */
+  --muted-foreground: #B4B4B8;        /* Improved: brighter muted text */
   --accent: #D4A27F;                  /* Bronze - secondary accent */
   --accent-foreground: #000000;
   --destructive: #DC2626;
   --destructive-foreground: #FFFFFF;
-  --border: #333333;
-  --input: #333333;
+  --border: #404040;                  /* Improved: better definition */
+  --input: #404040;
   --ring: #D97757;                    /* Focus ring - coral */
 
   /* Chart colors - coral/bronze palette */
@@ -82,13 +82,13 @@
   --radius: 0.5rem;
 
   /* Sidebar */
-  --sidebar: #1A1A1A;
+  --sidebar: #242424;                    /* Improved: +8% brightness */
   --sidebar-foreground: #FAFAFA;
   --sidebar-primary: #D97757;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #242424;
+  --sidebar-accent: #2E2E2E;             /* Improved: +8% brightness */
   --sidebar-accent-foreground: #FAFAFA;
-  --sidebar-border: #333333;
+  --sidebar-border: #404040;             /* Improved: better definition */
   --sidebar-ring: #D97757;
 
   /* Font families */
@@ -113,8 +113,8 @@
   --premium-badge: #F59E0B;
 
   /* Section alternating backgrounds */
-  --section-dark: #191512;
-  --section-light: #1C1C1C;
+  --section-dark: #1E1E1E;              /* Improved: more depth */
+  --section-light: #222222;             /* Improved: more depth */
 }
 
 /* Dark mode class - same as root since we're always dark */
@@ -147,15 +147,15 @@
 
   /* Coral glow effect */
   .glow-coral {
-    box-shadow: 0 0 20px rgba(217, 119, 87, 0.4);
+    box-shadow: 0 0 20px rgba(217, 119, 87, 0.3);  /* Reduced for lighter bg */
   }
   .glow-coral-lg {
-    box-shadow: 0 0 30px rgba(217, 119, 87, 0.5);
+    box-shadow: 0 0 30px rgba(217, 119, 87, 0.4);  /* Reduced for lighter bg */
   }
 
   /* Bronze glow effect */
   .glow-bronze {
-    box-shadow: 0 0 20px rgba(212, 162, 127, 0.4);
+    box-shadow: 0 0 20px rgba(212, 162, 127, 0.3);  /* Reduced for lighter bg */
   }
 
   /* Icon background with gradient */
@@ -177,7 +177,7 @@
   }
   .hover-border-coral:hover {
     border-color: var(--coral-accent);
-    box-shadow: 0 0 20px rgba(217, 119, 87, 0.2);
+    box-shadow: 0 0 20px rgba(217, 119, 87, 0.15);  /* Reduced for lighter bg */
   }
 
   /* Panel effect */

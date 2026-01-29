@@ -3,7 +3,6 @@ import { HeroSection } from "./components/hero-section";
 import { RegistrationForm } from "./components/registration-form";
 import { VideoGrid } from "./components/video-grid";
 import Link from "next/link";
-import { Code2 } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Get 3 Months BIMSpped Pro Free | BIM Developer Academy",
@@ -26,7 +25,9 @@ export default function BIMSppedPromoPage() {
               href="/"
               className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity group"
             >
-              <Code2 className="h-6 w-6 text-coral-accent group-hover:scale-110 transition-transform" />
+              <span className="text-2xl font-bold text-coral-accent font-mono group-hover:scale-110 transition-transform">
+                &lt;/&gt;
+              </span>
               <span className="text-lg font-bold text-gradient">
                 BIM Developer
               </span>

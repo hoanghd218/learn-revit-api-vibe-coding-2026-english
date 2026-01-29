@@ -2,7 +2,6 @@
 
 import { Button } from '@/components/ui/button';
 import { Container } from '@/components/bim';
-import { Code2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/lib/auth/auth-context';
@@ -55,7 +54,9 @@ export function Header({ className }: HeaderProps) {
             href="/"
             className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <Code2 className="h-6 w-6 text-coral-accent" />
+            <span className="text-2xl font-bold text-coral-accent font-mono">
+              &lt;/&gt;
+            </span>
             <span className="text-lg font-bold text-gradient">
               BIM Developer
             </span>
