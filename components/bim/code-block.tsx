@@ -80,7 +80,7 @@ export function CodeBlock({
           onClick={handleCopy}
         >
           {copied ? (
-            <Check className="h-4 w-4 text-[#4EC9B0]" />
+            <Check className="h-4 w-4 text-[var(--teal-accent)]" />
           ) : (
             <Copy className="h-4 w-4" />
           )}

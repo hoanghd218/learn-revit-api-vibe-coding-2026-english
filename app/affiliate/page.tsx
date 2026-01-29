@@ -129,7 +129,7 @@ export default function AffiliatePage() {
     };
     const colors: Record<string, string> = {
       pending: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50',
-      approved: 'bg-coral-accent/20 text-coral-accent border-coral-accent/50',
+      approved: 'bg-[var(--orange-red-accent)]/20 text-[var(--orange-red-accent)] border-[var(--orange-red-accent)]/50',
       paid: 'bg-green-500/20 text-green-400 border-green-500/50',
     };
     return (
@@ -159,10 +159,10 @@ export default function AffiliatePage() {
 
         <div className="grid gap-6">
           {/* Referral Link Section */}
-          <Card className="border-coral-accent/30">
+          <Card className="border-[var(--orange-red-accent)]/30">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Link2 className="h-5 w-5 text-coral-accent" />
+                <Link2 className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 Your Referral Link
               </CardTitle>
               <CardDescription>
@@ -205,7 +205,7 @@ export default function AffiliatePage() {
 
           {/* Stats Grid */}
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Card className="hover-border-coral transition-all">
+            <Card className="hover:border-[var(--orange-red-accent)]/50 transition-all">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -214,14 +214,14 @@ export default function AffiliatePage() {
                       ${stats.totalEarnings.toFixed(2)}
                     </p>
                   </div>
-                  <div className="h-12 w-12 rounded-full bg-coral-accent/20 flex items-center justify-center">
-                    <DollarSign className="h-6 w-6 text-coral-accent" />
+                  <div className="h-12 w-12 rounded-full bg-[var(--orange-red-accent)]/20 flex items-center justify-center">
+                    <DollarSign className="h-6 w-6 text-[var(--orange-red-accent)]" />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover-border-coral transition-all">
+            <Card className="hover:border-[var(--orange-red-accent)]/50 transition-all">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -230,14 +230,14 @@ export default function AffiliatePage() {
                       {stats.totalReferrals}
                     </p>
                   </div>
-                  <div className="h-12 w-12 rounded-full bg-bronze-accent/20 flex items-center justify-center">
-                    <Users className="h-6 w-6 text-bronze-accent" />
+                  <div className="h-12 w-12 rounded-full bg-[var(--ocean-blue-accent)]/20 flex items-center justify-center">
+                    <Users className="h-6 w-6 text-[var(--ocean-blue-accent)]" />
                   </div>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="hover-border-coral transition-all">
+            <Card className="hover:border-[var(--orange-red-accent)]/50 transition-all">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -253,7 +253,7 @@ export default function AffiliatePage() {
               </CardContent>
             </Card>
 
-            <Card className="hover-border-coral transition-all">
+            <Card className="hover:border-[var(--orange-red-accent)]/50 transition-all">
               <CardContent className="pt-6">
                 <div className="flex items-center justify-between">
                   <div>
@@ -274,7 +274,7 @@ export default function AffiliatePage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Percent className="h-5 w-5 text-coral-accent" />
+                <Percent className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 Commission Rates
               </CardTitle>
               <CardDescription>
@@ -285,12 +285,12 @@ export default function AffiliatePage() {
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="p-4 rounded-lg bg-muted/50 border border-border">
                   <h4 className="font-medium text-foreground mb-1">Bronze</h4>
-                  <p className="text-2xl font-bold text-coral-accent mb-1">15%</p>
+                  <p className="text-2xl font-bold text-[var(--orange-red-accent)] mb-1">15%</p>
                   <p className="text-xs text-muted-foreground">1-5 referrals</p>
                 </div>
-                <div className="p-4 rounded-lg bg-muted/50 border border-bronze-accent/50">
+                <div className="p-4 rounded-lg bg-muted/50 border border-[var(--ocean-blue-accent)]/50">
                   <h4 className="font-medium text-foreground mb-1">Silver</h4>
-                  <p className="text-2xl font-bold text-bronze-accent mb-1">20%</p>
+                  <p className="text-2xl font-bold text-[var(--ocean-blue-accent)] mb-1">20%</p>
                   <p className="text-xs text-muted-foreground">6-15 referrals</p>
                 </div>
                 <div className="p-4 rounded-lg bg-muted/50 border border-primary/50">
@@ -306,7 +306,7 @@ export default function AffiliatePage() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Gift className="h-5 w-5 text-coral-accent" />
+                <Gift className="h-5 w-5 text-[var(--orange-red-accent)]" />
                 Earnings History
               </CardTitle>
               <CardDescription>

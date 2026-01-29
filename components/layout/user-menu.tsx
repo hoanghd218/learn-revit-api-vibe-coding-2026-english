@@ -64,17 +64,17 @@ export function UserMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button
-          className="outline-none focus-visible:ring-2 focus-visible:ring-coral-accent rounded-full transition-transform active:scale-95"
+          className="outline-none focus-visible:ring-2 focus-visible:ring-[var(--orange-red-accent)] rounded-full transition-transform active:scale-95"
           aria-label="User menu"
         >
           {user?.imageUrl ? (
             <img
               src={user.imageUrl}
               alt="Profile"
-              className="h-9 w-9 rounded-full border-2 border-coral-accent/50 object-cover"
+              className="h-9 w-9 rounded-full border-2 border-[var(--orange-red-accent)]/50 object-cover"
             />
           ) : (
-            <div className="h-9 w-9 rounded-full bg-coral-accent/20 border-2 border-coral-accent/50 flex items-center justify-center text-coral-accent text-sm font-semibold">
+            <div className="h-9 w-9 rounded-full bg-[var(--orange-red-accent)]/20 border-2 border-[var(--orange-red-accent)]/50 flex items-center justify-center text-[var(--orange-red-accent)] text-sm font-semibold">
               {getInitials()}
             </div>
           )}
@@ -110,7 +110,7 @@ export function UserMenu() {
               'data-[variant=destructive]:focus:bg-destructive/10'
             )}
           >
-            <item.icon className="h-4 w-4 text-muted-foreground group-hover/dropdown-menu-item:text-coral-accent" />
+            <item.icon className="h-4 w-4 text-muted-foreground group-hover/dropdown-menu-item:text-[var(--orange-red-accent)]" />
             <span>{item.label}</span>
           </DropdownMenuItem>
         ))}

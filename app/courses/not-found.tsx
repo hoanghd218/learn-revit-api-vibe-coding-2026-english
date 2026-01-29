@@ -14,7 +14,7 @@ export default function CourseNotFound() {
         </p>
         <Link
           href="/"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-coral-accent text-white hover:bg-coral-accent/90 transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--orange-red-accent)] text-white hover:bg-[var(--orange-red-accent)]/90 transition-colors"
         >
           <Home className="h-4 w-4" />
           Back to Home

@@ -25,7 +25,7 @@ export default function BIMSppedPromoPage() {
               href="/"
               className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity group"
             >
-              <span className="text-2xl font-bold text-coral-accent font-mono group-hover:scale-110 transition-transform">
+              <span className="text-2xl font-bold text-[var(--orange-red-accent)] font-mono group-hover:scale-110 transition-transform">
                 &lt;/&gt;
               </span>
               <span className="text-lg font-bold text-gradient">

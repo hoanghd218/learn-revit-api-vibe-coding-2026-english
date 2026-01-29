@@ -24,7 +24,7 @@ export function CourseHeader({ course }: CourseHeaderProps) {
         <div className="flex items-center gap-2">
           <span className="text-muted-foreground">Giảng viên:</span>
           <div className="flex items-center gap-2 px-2 py-1 rounded-lg bg-muted/50 hover:bg-muted transition-colors cursor-pointer">
-            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-coral-accent to-bronze-accent flex items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-gradient-to-br from-[var(--orange-red-accent)] to-[var(--ocean-blue-accent)] flex items-center justify-center">
               <User className="h-3 w-3 text-white" />
             </div>
             <span className="font-medium text-foreground">{course.instructor}</span>
@@ -39,7 +39,7 @@ export function CourseHeader({ course }: CourseHeaderProps) {
 
         {/* Premium badge */}
         {course.isPremium && (
-          <span className="px-3 py-1 rounded-full bg-coral-accent/20 text-coral-accent text-xs font-semibold border border-coral-accent/40">
+          <span className="px-3 py-1 rounded-full bg-[var(--orange-red-accent)]/20 text-[var(--orange-red-accent)] text-xs font-semibold border border-[var(--orange-red-accent)]/40">
             Premium
           </span>
         )}

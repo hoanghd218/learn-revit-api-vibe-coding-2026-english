@@ -157,7 +157,7 @@ export function RegisterForm({ onSuccess, onSwitchToLogin }: RegisterFormProps) 
                 <Button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full glow-coral bg-coral-accent hover:bg-coral-accent/80 text-white"
+                    className="w-full button-hover-shadow bg-[var(--orange-red-accent)] hover:bg-[var(--orange-red-accent)]/80 text-white"
                 >
                     {isLoading ? (
                         <>

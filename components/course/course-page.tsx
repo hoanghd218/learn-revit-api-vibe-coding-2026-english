@@ -65,7 +65,7 @@ export function CoursePage({ course }: CoursePageProps) {
                 // Lesson Content View
                 <div className="space-y-6 animate-in fade-in duration-300">
                   <div className="border-b border-border pb-4">
-                    <div className="flex items-center gap-2 text-sm text-coral-accent font-medium mb-2">
+                    <div className="flex items-center gap-2 text-sm text-[var(--orange-red-accent)] font-medium mb-2">
                       <span>Đang xem bài học</span>
                     </div>
                     <h1 className="text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
@@ -75,10 +75,10 @@ export function CoursePage({ course }: CoursePageProps) {
 
                   {activeLesson.content ? (
                     <div
-                      className="prose prose-invert max-w-none 
-                        prose-headings:text-foreground prose-p:text-muted-foreground 
-                        prose-a:text-coral-accent prose-strong:text-foreground
-                        prose-ul:text-muted-foreground prose-li:marker:text-coral-accent"
+                      className="prose prose-invert max-w-none
+                        prose-headings:text-foreground prose-p:text-muted-foreground
+                        prose-a:text-[var(--orange-red-accent)] prose-strong:text-foreground
+                        prose-ul:text-muted-foreground prose-li:marker:text-[var(--orange-red-accent)]"
                       dangerouslySetInnerHTML={{ __html: activeLesson.content }}
                     />
                   ) : (

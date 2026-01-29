@@ -57,23 +57,23 @@ export default function Page() {
               {/* Brand */}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Code2 className="h-6 w-6 text-coral-accent" />
+                  <Code2 className="h-6 w-6 text-[var(--orange-red-accent)]" />
                   <span className="text-lg font-bold text-gradient">BIM Developer</span>
                 </div>
                 <p className="text-sm text-muted-foreground">
                   Transform from BIM User to High-Paid BIM Developer. Master C#, Revit API, and WPF.
                 </p>
                 <div className="flex gap-4">
-                  <a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">
                     <Twitter className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">
                     <Github className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">
                     <Linkedin className="h-5 w-5" />
                   </a>
-                  <a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">
+                  <a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">
                     <Mail className="h-5 w-5" />
                   </a>
                 </div>
@@ -83,10 +83,10 @@ export default function Page() {
               <div>
                 <h4 className="font-semibold mb-4">Quick Links</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><Link href="#curriculum" className="text-muted-foreground hover:text-coral-accent transition-colors">Curriculum</Link></li>
-                  <li><Link href="#projects" className="text-muted-foreground hover:text-coral-accent transition-colors">Student Projects</Link></li>
-                  <li><Link href="#instructor" className="text-muted-foreground hover:text-coral-accent transition-colors">Instructor</Link></li>
-                  <li><Link href="#tech-stack" className="text-muted-foreground hover:text-coral-accent transition-colors">Tech Stack</Link></li>
+                  <li><Link href="#curriculum" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Curriculum</Link></li>
+                  <li><Link href="#projects" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Student Projects</Link></li>
+                  <li><Link href="#instructor" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Instructor</Link></li>
+                  <li><Link href="#tech-stack" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Tech Stack</Link></li>
                 </ul>
               </div>
 
@@ -94,10 +94,10 @@ export default function Page() {
               <div>
                 <h4 className="font-semibold mb-4">Resources</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Documentation</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">API Reference</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Community</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Blog</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Documentation</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">API Reference</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Community</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Blog</a></li>
                 </ul>
               </div>
 
@@ -105,9 +105,9 @@ export default function Page() {
               <div>
                 <h4 className="font-semibold mb-4">Legal</h4>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Privacy Policy</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Terms of Service</a></li>
-                  <li><a href="#" className="text-muted-foreground hover:text-coral-accent transition-colors">Refund Policy</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Privacy Policy</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Terms of Service</a></li>
+                  <li><a href="#" className="text-muted-foreground hover:text-[var(--orange-red-accent)] transition-colors">Refund Policy</a></li>
                 </ul>
               </div>
             </div>
