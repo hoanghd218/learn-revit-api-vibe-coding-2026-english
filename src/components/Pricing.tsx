@@ -58,7 +58,7 @@ const tiers: Tier[] = [
   {
     id: "option2",
     highlighted: true,
-    badge: "PHỔ BIẾN NHẤT · TIẾT KIỆM 86%",
+    badge: "PHỔ BIẾN NHẤT · TIẾT KIỆM 90%+",
     name: "Gói Full + Vibe Coding Web",
     tagline: "Cho người muốn cả đội AI Revit + AI Web bán hàng",
     pricePaid: 5_000_000,
@@ -69,6 +69,7 @@ const tiers: Tier[] = [
       { label: "Bộ Agents Marketing & Content cho Web", value: 2_000_000 },
       { label: "Skills tự động hóa Website", value: 2_000_000 },
       { label: "Template Web Bán Khóa Học (deploy 1 click)", value: 2_500_000 },
+      { label: "🎨 FULL source code app.bimai.vn (render ảnh/video kiến trúc) + hướng dẫn", value: 10_000_000 },
       { label: "Group Coaching hàng tuần cùng Tony (4 buổi/tháng)", value: 4_000_000 },
     ],
     fastActionBonus: [
@@ -100,8 +101,8 @@ export default function Pricing() {
               Đây Là TẤT CẢ Những Gì Bạn Nhận Được
             </h2>
             <p className="text-on-surface-variant text-sm sm:text-base">
-              Mỗi gói đều stack giá trị gấp{" "}
-              <span className="text-primary font-black">7x — 8x</span> so với mức bạn trả
+              Stack giá trị gấp{" "}
+              <span className="text-primary font-black">9x — 11x</span> so với mức bạn trả
             </p>
           </div>
         </ScrollReveal>

@@ -39,7 +39,7 @@ export default function Hero() {
           Học cách dùng <span className="text-primary font-bold">Anti-gravity + Claude Code</span> biến AI thành
           đội nhân viên 24/7 — tự build Revit Add-in, scan model, vận hành website thay bạn.
           <br />
-          Bonus: TOÀN BỘ skills/agents/templates Tony đã build · Top học viên được hợp tác dự án cùng BimSpeed.
+          Bonus gói Full: tặng FULL source code app.bimai.vn (render ảnh/video kiến trúc bằng AI) + hợp tác dự án cùng BimSpeed.
         </p>
 
         {/* Price banner */}

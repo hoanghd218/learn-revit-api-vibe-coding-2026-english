@@ -86,6 +86,14 @@ const bonuses: {
       value: "2,500,000đ",
       plan: "option2",
     },
+    {
+      icon: "view_in_ar",
+      title: "FULL Source Code app.bimai.vn + Hướng Dẫn",
+      description:
+        "Trọn bộ source code phần mềm render ảnh/video kiến trúc & nội thất bằng AI (giống app.bimai.vn). Kèm hướng dẫn deploy, chỉnh sửa, vận hành — bạn có thể tự host và bán dịch vụ render cho khách hàng.",
+      value: "10,000,000đ",
+      plan: "option2",
+    },
   ];
 
 export default function Bonuses() {
@@ -100,7 +108,7 @@ export default function Bonuses() {
           <div className="text-center mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-6 animate-bounce-subtle">
               <span className="material-symbols-outlined text-base sm:text-xl">redeem</span>
-              TỔNG GIÁ TRỊ BONUS LÊN TỚI 23,500,000đ
+              TỔNG GIÁ TRỊ BONUS LÊN TỚI 33,500,000đ
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase text-on-surface tracking-tighter mb-3 sm:mb-4">
               Quà Tặng{" "}
