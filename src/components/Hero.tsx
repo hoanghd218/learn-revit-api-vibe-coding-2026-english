@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 
-const TOTAL_SLOTS = 300;
-const REGISTERED = 211;
-const REMAINING = TOTAL_SLOTS - REGISTERED;
+const REGISTERED = 22;
 
 export default function Hero() {
   return (
@@ -78,10 +76,10 @@ export default function Hero() {
             <span className="material-symbols-outlined text-red-400 text-lg animate-pulse">group</span>
             <div className="text-left">
               <div className="text-xs sm:text-sm text-red-300 font-bold">
-                <span className="text-base sm:text-lg text-red-400 font-black">{REGISTERED}</span>/{TOTAL_SLOTS} slot đã đăng ký khóa học
+                Đã có <span className="text-base sm:text-lg text-red-400 font-black">{REGISTERED}</span> người đăng ký khóa học
               </div>
               <div className="text-[10px] sm:text-xs text-red-400/80">
-                Chỉ còn <span className="font-black text-red-400">{REMAINING} slot</span> đợt 1!
+                Đăng ký sớm để giữ ưu đãi đợt 1!
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@
 import ScrollReveal from "./ScrollReveal";
 
 const ZALO_LINK = "https://zalo.me/g/ghjisy452";
-const SLOTS_LEFT = 89;
+const REGISTERED = 22;
 
 export default function FinalCTA() {
   return (
@@ -26,11 +26,10 @@ export default function FinalCTA() {
           {/* Urgency bar */}
           <div className="inline-flex flex-wrap justify-center items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-red-600/15 border border-red-500/30 animate-bounce-subtle max-w-full">
             <span className="material-symbols-outlined text-red-400 animate-pulse text-lg sm:text-2xl shrink-0">
-              warning
+              local_fire_department
             </span>
             <span className="text-red-300 font-bold text-sm sm:text-base text-center">
-              Đợt mở bán đợt 1 — chỉ còn{" "}
-              <span className="text-red-400 font-black text-lg sm:text-xl">{SLOTS_LEFT}</span> slot!
+              Đợt mở bán đợt 1 — đăng ký sớm để giữ ưu đãi!
             </span>
           </div>
 
@@ -55,7 +54,7 @@ export default function FinalCTA() {
             </a>
           </div>
           <p className="text-on-surface-variant font-medium text-sm sm:text-base">
-            Hơn 211 kỹ sư BIM, chủ doanh nghiệp, quản lý đã đăng ký · còn {SLOTS_LEFT} slot đợt 1
+            Đã có {REGISTERED} kỹ sư BIM, chủ doanh nghiệp, quản lý đăng ký khóa học
           </p>
         </div>
       </ScrollReveal>

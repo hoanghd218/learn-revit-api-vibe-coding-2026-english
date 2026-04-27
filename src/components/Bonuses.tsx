@@ -11,82 +11,82 @@ const bonuses: {
   value: string;
   plan: BonusPlan;
 }[] = [
-  // ===== Cả 2 gói =====
-  {
-    icon: "extension",
-    title: "TOÀN BỘ Skills Phát Triển Revit API",
-    description:
-      "Mọi skill Tony đã build cho Claude Code: tự sinh boilerplate Add-in, debug Revit API, generate ribbon, MVVM, parameter helpers, geometry utils — copy về dùng ngay.",
-    value: "3,000,000đ",
-    plan: "both",
-  },
-  {
-    icon: "smart_toy",
-    title: "TOÀN BỘ Agents Tự Động Hóa Revit",
-    description:
-      "Agents đọc model Revit, sinh báo cáo QC Excel, gửi email stakeholders, post update lên Discord/Slack — chạy 24/7 không cần can thiệp.",
-    value: "2,500,000đ",
-    plan: "both",
-  },
-  {
-    icon: "auto_awesome",
-    title: "TOÀN BỘ Skills AI Agent General-Purpose",
-    description:
-      "Toolkit Claude Code: prompts library, MCP configs, sub-agent templates, hooks, workflow patterns — dùng cho mọi domain ngoài Revit.",
-    value: "2,000,000đ",
-    plan: "both",
-  },
-  {
-    icon: "folder_special",
-    title: "TOÀN BỘ Templates Revit Add-in Tony Đã Tạo",
-    description:
-      "Starter projects (multi-version 2020-2025), MVVM template, ribbon template, license offline template, installer template — chỉnh sửa là chạy.",
-    value: "1,500,000đ",
-    plan: "both",
-  },
-  {
-    icon: "handshake",
-    title: "Ưu Tiên Hợp Tác Dự Án Cùng Tony & BimSpeed",
-    description:
-      "Học viên hoàn thành tốt khóa học được ưu tiên mời tham gia các dự án thực tế của Tony Hoàng và BimSpeed — kiếm tiền từ skill vừa học, build portfolio chuyên nghiệp.",
-    value: "5,000,000đ+",
-    plan: "both",
-  },
+    // ===== Cả 2 gói =====
+    {
+      icon: "extension",
+      title: "TOÀN BỘ Skills Phát Triển Revit API",
+      description:
+        "Mọi skill Tony đã build cho Claude Code: tự sinh boilerplate Add-in, debug Revit API, generate ribbon, MVVM, parameter helpers, geometry utils — copy về dùng ngay.",
+      value: "3,000,000đ",
+      plan: "both",
+    },
+    {
+      icon: "smart_toy",
+      title: "TOÀN BỘ Agents Tự Động Hóa Revit",
+      description:
+        "Agents đọc model Revit, sinh báo cáo QC Excel, gửi email stakeholders, post update lên Discord/Slack — chạy 24/7 không cần can thiệp.",
+      value: "2,500,000đ",
+      plan: "both",
+    },
+    {
+      icon: "auto_awesome",
+      title: "TOÀN BỘ Skills AI Agent General-Purpose",
+      description:
+        "Toolkit Claude Code: prompts library, MCP configs, sub-agent templates, hooks, workflow patterns — dùng cho mọi domain ngoài Revit.",
+      value: "2,000,000đ",
+      plan: "both",
+    },
+    {
+      icon: "folder_special",
+      title: "TOÀN BỘ Templates Revit Add-in Tony Đã Tạo",
+      description:
+        "Starter projects (multi-version 2020-2025), MVVM template, ribbon template, license offline template, installer template — chỉnh sửa là chạy.",
+      value: "1,500,000đ",
+      plan: "both",
+    },
+    {
+      icon: "handshake",
+      title: "Ưu Tiên Hợp Tác Dự Án Cùng Tony & BimSpeed",
+      description:
+        "Học viên hoàn thành tốt khóa học được ưu tiên mời tham gia các dự án thực tế của Tony Hoàng và BimSpeed — kiếm tiền từ skill vừa học, build portfolio chuyên nghiệp.",
+      value: "5,000,000đ+",
+      plan: "both",
+    },
 
-  // ===== Chỉ gói 5M =====
-  {
-    icon: "code_blocks",
-    title: "TOÀN BỘ Skills Vibe Coding Web",
-    description:
-      "Skills sinh Next.js component, Tailwind layouts, payment integration (SePay/Stripe), auth, deployment Vercel/Cloudflare — build web không cần code.",
-    value: "3,000,000đ",
-    plan: "option2",
-  },
-  {
-    icon: "campaign",
-    title: "Bộ Agents Marketing & Content cho Web",
-    description:
-      "Agents tự sinh blog post, SEO meta, social copy, email campaign, scrape competitor data — mở web cá nhân/công ty xong là có content chạy ngay.",
-    value: "2,000,000đ",
-    plan: "option2",
-  },
-  {
-    icon: "captive_portal",
-    title: "Skills Tự Động Hóa Website",
-    description:
-      "Skills scrape data, đăng bài, quản lý fanpage, update sản phẩm, monitor uptime — tự động hóa toàn bộ vận hành website.",
-    value: "2,000,000đ",
-    plan: "option2",
-  },
-  {
-    icon: "rocket_launch",
-    title: "Template Web Bán Khóa Học Có Sẵn",
-    description:
-      "Template Next.js + Tailwind landing page, tích hợp SePay/Stripe, member area, license offline — deploy 1 click lên Vercel.",
-    value: "2,500,000đ",
-    plan: "option2",
-  },
-];
+    // ===== Chỉ gói 5M =====
+    {
+      icon: "code_blocks",
+      title: "TOÀN BỘ Skills Vibe Coding Web",
+      description:
+        "Skills sinh Next.js component, Tailwind layouts, payment integration (SePay/Stripe), auth, deployment Vercel/Cloudflare — build web không cần code.",
+      value: "3,000,000đ",
+      plan: "option2",
+    },
+    {
+      icon: "campaign",
+      title: "Bộ Agents Marketing & Content cho Web",
+      description:
+        "Agents tự sinh blog post, SEO meta, social copy, email campaign, scrape competitor data — mở web cá nhân/công ty xong là có content chạy ngay.",
+      value: "2,000,000đ",
+      plan: "option2",
+    },
+    {
+      icon: "captive_portal",
+      title: "Skills Tự Động Hóa Website",
+      description:
+        "Skills scrape data, đăng bài, quản lý fanpage, update sản phẩm, monitor uptime — tự động hóa toàn bộ vận hành website.",
+      value: "2,000,000đ",
+      plan: "option2",
+    },
+    {
+      icon: "rocket_launch",
+      title: "Template Web Bán Khóa Học Có Sẵn",
+      description:
+        "Template Next.js + Tailwind landing page, tích hợp SePay/Stripe, member area, license offline — deploy 1 click lên Vercel.",
+      value: "2,500,000đ",
+      plan: "option2",
+    },
+  ];
 
 export default function Bonuses() {
   return (
@@ -131,11 +131,10 @@ export default function Bonuses() {
                         Trị giá {bonus.value}
                       </span>
                       <span
-                        className={`px-2 py-0.5 rounded-full text-[10px] font-black ${
-                          bonus.plan === "option2"
+                        className={`px-2 py-0.5 rounded-full text-[10px] font-black ${bonus.plan === "option2"
                             ? "bg-red-600/20 text-red-400"
                             : "bg-green-600/20 text-green-400"
-                        }`}
+                          }`}
                       >
                         {bonus.plan === "option2" ? "GÓI 5M" : "Cả 2 gói"}
                       </span>
@@ -167,7 +166,7 @@ export default function Bonuses() {
               </h3>
               <p className="text-sm sm:text-base text-on-surface-variant max-w-lg mx-auto">
                 Buổi group coaching 60 phút mỗi tuần — Tony review code/Add-in/web của học viên,
-                giải đáp thắc mắc, chia sẻ best practice. Học cùng cộng đồng, không có hỗ trợ 1:1.
+                giải đáp thắc mắc, chia sẻ best practice.
               </p>
             </div>
           </div>

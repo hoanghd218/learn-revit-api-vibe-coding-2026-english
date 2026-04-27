@@ -94,7 +94,7 @@ export default function Pricing() {
         <ScrollReveal>
           <div className="text-center mb-10">
             <div className="inline-block px-3 py-1 rounded-full bg-red-600/20 text-red-400 text-xs font-black mb-4 animate-pulse">
-              ƯU ĐÃI MỞ BÁN ĐỢT 1 — CHỈ CÒN 89 SLOT
+              ƯU ĐÃI MỞ BÁN ĐỢT 1 — ĐÃ CÓ 22 NGƯỜI ĐĂNG KÝ
             </div>
             <h2 className="text-3xl sm:text-5xl font-black tracking-tighter mb-3">
               Đây Là TẤT CẢ Những Gì Bạn Nhận Được
@@ -287,7 +287,7 @@ export default function Pricing() {
                     Tại sao phải đăng ký NGAY?
                   </div>
                   <h4 className="font-black text-base sm:text-lg mb-1">
-                    Đợt 1 chỉ còn 89 slot · Bonus 48h hết sau giờ
+                    Đợt 1 đang mở bán · Bonus 48h hết sau giờ
                   </h4>
                   <p className="text-xs sm:text-sm text-on-surface-variant">
                     Sau đợt 1: giá quay lại 10M, không còn fast action bonus, không còn group coaching subsidy.

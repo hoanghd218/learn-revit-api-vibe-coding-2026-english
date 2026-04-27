@@ -34,10 +34,7 @@ export default function Countdown() {
 
   const { days, hours, minutes, seconds } = formatTime(session.target - now);
 
-  const TOTAL_SLOTS = 300;
-  const REGISTERED = 211;
-  const REMAINING = TOTAL_SLOTS - REGISTERED;
-  const percentage = (REGISTERED / TOTAL_SLOTS) * 100;
+  const REGISTERED = 22;
 
   return (
     <section className="py-8 sm:py-12 px-4 sm:px-6">
@@ -80,24 +77,13 @@ export default function Countdown() {
               ))}
             </div>
 
-            {/* Slot progress */}
-            <div className="space-y-2 sm:space-y-3">
-              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-1 text-xs sm:text-sm">
-                <span className="text-on-surface-variant">
-                  <span className="text-primary font-black text-base sm:text-lg">{REGISTERED}</span> / {TOTAL_SLOTS} slot đã đăng ký khóa học
-                </span>
-                <span className="text-red-400 font-bold animate-pulse">
-                  Chỉ còn {REMAINING} slot đợt 1!
-                </span>
+            {/* Registration counter */}
+            <div className="text-center">
+              <div className="text-xs sm:text-sm text-on-surface-variant">
+                Đã có <span className="text-primary font-black text-lg sm:text-xl">{REGISTERED}</span> người đăng ký khóa học
               </div>
-              <div className="relative w-full h-3 sm:h-4 bg-surface rounded-full overflow-hidden border border-primary/10">
-                <div
-                  className="h-full bg-linear-to-r from-primary to-secondary-container rounded-full transition-all duration-1000 slot-bar-glow"
-                  style={{ width: `${percentage}%` }}
-                />
-              </div>
-              <p className="text-center text-on-surface-variant text-[10px] sm:text-xs">
-                Đợt mở bán đợt 1 giới hạn <span className="text-primary font-bold">{TOTAL_SLOTS}</span> kỹ sư
+              <p className="text-on-surface-variant text-[10px] sm:text-xs mt-1">
+                Đăng ký sớm để giữ ưu đãi mở bán đợt 1
               </p>
             </div>
 
