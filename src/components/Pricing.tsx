@@ -2,7 +2,7 @@
 
 import ScrollReveal from "./ScrollReveal";
 
-const ZALO_LINK = "https://zalo.me/g/ghjisy452";
+const ZALO_LINK = "https://zalo.me/g/v169jbjxeuhthgocvhgs";
 
 interface ValueItem {
   label: string;

@@ -1,4 +1,4 @@
-const ZALO_LINK = "https://zalo.me/g/ghjisy452";
+const ZALO_LINK = "https://zalo.me/g/v169jbjxeuhthgocvhgs";
 
 export default function Footer() {
   return (
@@ -22,8 +22,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-6 sm:gap-8 text-sm sm:text-base">
-            <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.youtube.com/@theaifirst" target="_blank" rel="noopener noreferrer">YouTube</a>
-            <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.facebook.com/theaifirst" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.facebook.com/bimspeedsolutions" target="_blank" rel="noopener noreferrer">Facebook</a>
             <a className="text-on-surface-variant hover:text-primary transition-colors" href={ZALO_LINK} target="_blank" rel="noopener noreferrer">Zalo</a>
           </div>
           <p className="text-on-surface-variant text-xs sm:text-sm">
