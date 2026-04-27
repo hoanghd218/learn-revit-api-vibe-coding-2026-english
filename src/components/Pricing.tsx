@@ -39,6 +39,7 @@ const tiers: Tier[] = [
       { label: "TOÀN BỘ Agents tự động hóa Revit", value: 2_500_000 },
       { label: "TOÀN BỘ Skills AI Agent General-Purpose", value: 2_000_000 },
       { label: "TOÀN BỘ Templates Revit Add-in (multi-version)", value: 1_500_000 },
+      { label: "🤝 Ưu tiên hợp tác dự án cùng Tony & BimSpeed (top học viên)", value: 5_000_000 },
       { label: "Group Zalo support trong & sau khóa", value: 500_000 },
     ],
     fastActionBonus: [
@@ -62,7 +63,7 @@ const tiers: Tier[] = [
     tagline: "Cho người muốn cả đội AI Revit + AI Web bán hàng",
     pricePaid: 5_000_000,
     valueStack: [
-      { label: "TẤT CẢ Gói Revit + AI bên trái", value: 22_000_000 },
+      { label: "TẤT CẢ Gói Revit + AI bên trái", value: 27_000_000 },
       { label: "Buổi 4 Live Zoom — Vibe Coding Web (gồm web render kiến trúc kiểu app.bimai.vn)", value: 1_500_000 },
       { label: "TOÀN BỘ Skills Vibe Coding Web (Next.js, payment, render 3D, deploy)", value: 3_000_000 },
       { label: "Bộ Agents Marketing & Content cho Web", value: 2_000_000 },

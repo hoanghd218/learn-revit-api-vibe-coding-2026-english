@@ -44,6 +44,14 @@ const bonuses: {
     value: "1,500,000đ",
     plan: "both",
   },
+  {
+    icon: "handshake",
+    title: "Ưu Tiên Hợp Tác Dự Án Cùng Tony & BimSpeed",
+    description:
+      "Học viên hoàn thành tốt khóa học được ưu tiên mời tham gia các dự án thực tế của Tony Hoàng và BimSpeed — kiếm tiền từ skill vừa học, build portfolio chuyên nghiệp.",
+    value: "5,000,000đ+",
+    plan: "both",
+  },
 
   // ===== Chỉ gói 5M =====
   {
@@ -92,7 +100,7 @@ export default function Bonuses() {
           <div className="text-center mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-primary font-bold text-xs sm:text-sm uppercase tracking-widest mb-4 sm:mb-6 animate-bounce-subtle">
               <span className="material-symbols-outlined text-base sm:text-xl">redeem</span>
-              TỔNG GIÁ TRỊ BONUS LÊN TỚI 18,500,000đ
+              TỔNG GIÁ TRỊ BONUS LÊN TỚI 23,500,000đ
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-black uppercase text-on-surface tracking-tighter mb-3 sm:mb-4">
               Quà Tặng{" "}
