@@ -11,6 +11,16 @@ export default function Footer() {
           <p className="text-on-surface-variant text-xs sm:text-sm text-center max-w-xl">
             Tổ chức khoa học AI Agents cho kỹ sư BIM, chủ doanh nghiệp xây dựng, cấp quản lý — biến AI thành đội nhân viên làm việc thay bạn.
           </p>
+
+          {/* Contact */}
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-sm">
+            <span className="text-on-surface-variant">Đăng ký khóa học:</span>
+            <span className="text-on-surface font-bold">Ms Hiên</span>
+            <a href="tel:0936340576" className="font-black text-primary hover:underline">
+              0936 340 576
+            </a>
+          </div>
+
           <div className="flex gap-6 sm:gap-8 text-sm sm:text-base">
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.youtube.com/@theaifirst" target="_blank" rel="noopener noreferrer">YouTube</a>
             <a className="text-on-surface-variant hover:text-primary transition-colors" href="https://www.facebook.com/theaifirst" target="_blank" rel="noopener noreferrer">Facebook</a>

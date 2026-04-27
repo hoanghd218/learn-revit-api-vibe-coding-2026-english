@@ -299,9 +299,22 @@ export default function Pricing() {
           </div>
         </ScrollReveal>
 
-        <p className="text-center text-xs text-on-surface-variant mt-6">
-          Click → Zalo của Tony · gửi link thanh toán SePay/chuyển khoản trong 5 phút
-        </p>
+        <div className="text-center mt-6 space-y-2">
+          <p className="text-xs text-on-surface-variant">
+            Click → Zalo của Tony · gửi link thanh toán SePay/chuyển khoản trong 5 phút
+          </p>
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-xl bg-surface-container-high border border-primary/30 text-sm">
+            <span className="material-symbols-outlined text-primary text-base">support_agent</span>
+            <span className="text-on-surface-variant">Hỗ trợ đăng ký:</span>
+            <span className="font-bold text-on-surface">Ms Hiên</span>
+            <a
+              href="tel:0936340576"
+              className="font-black text-primary hover:underline"
+            >
+              0936 340 576
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

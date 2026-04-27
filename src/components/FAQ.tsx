@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "Đăng ký bằng cách nào?",
     answer:
-      "Click nút 'Đăng Ký Khóa Học' để vào nhóm Zalo. Tony hoặc team sẽ gửi link thanh toán SePay/chuyển khoản + tài liệu setup ngay trong 5 phút.",
+      "Liên hệ Ms Hiên — 0936 340 576 (gọi/Zalo) để được tư vấn + nhận link thanh toán SePay/chuyển khoản. Hoặc click nút 'Đăng Ký Khóa Học' để vào nhóm Zalo, team sẽ phản hồi trong 5 phút.",
   },
 ];
 
